@@ -1,0 +1,47 @@
+```gitignore
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Environment variables
+.env
+.env.*
+
+# Django
+*.log
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Pytest
+.pytest_cache/
+
+# Coverage
+.coverage
+htmlcov/
+
+# Django migrations
+# DON'T ignore migrations in real projects
+# */migrations/*.py
+# */migrations/__pycache__/
+
+# Secrets
+*.pem
+*.key
+```
