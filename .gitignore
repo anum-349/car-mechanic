@@ -1,4 +1,4 @@
-.env
-.env.*
 !.env.example
 !.env.production.example
+config.bat
+node_modules
