@@ -1,0 +1,5068 @@
+[
+ {
+  "model": "knowledge.symptom",
+  "pk": 300001,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "key": "clicking-only-when-turning-key",
+   "category": 9002,
+   "text_en": "Only a clicking sound when turning the key",
+   "text_roman": "Chaabi ghumane par sirf click ki awaaz aati hai",
+   "text_ur": "",
+   "is_safety_critical": false,
+   "is_observable": true,
+   "is_generic": false
+  }
+ },
+ {
+  "model": "knowledge.symptom",
+  "pk": 300002,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "key": "dashboard-lights-dim-when-cranking",
+   "category": 9002,
+   "text_en": "Dashboard lights dim or go out when turning the key",
+   "text_roman": "Chaabi ghumane par dashboard ki lights dheemi ya band ho jati hain",
+   "text_ur": "",
+   "is_safety_critical": false,
+   "is_observable": true,
+   "is_generic": false
+  }
+ },
+ {
+  "model": "knowledge.symptom",
+  "pk": 300003,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "key": "nothing-happens-when-turning-key",
+   "category": 9002,
+   "text_en": "Nothing happens at all when turning the key",
+   "text_roman": "Chaabi ghumane par bilkul kuch nahi hota",
+   "text_ur": "",
+   "is_safety_critical": false,
+   "is_observable": true,
+   "is_generic": false
+  }
+ },
+ {
+  "model": "knowledge.symptom",
+  "pk": 300004,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "key": "fuel-pump-silent-ignition-on",
+   "category": 9002,
+   "text_en": "Fuel pump is silent when the ignition is switched on",
+   "text_roman": "Ignition on karne par fuel pump ki halki awaaz nahi aati",
+   "text_ur": "",
+   "is_safety_critical": false,
+   "is_observable": true,
+   "is_generic": false
+  }
+ },
+ {
+  "model": "knowledge.symptom",
+  "pk": 300005,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "key": "security-light-flashing",
+   "category": 9002,
+   "text_en": "Security or key light keeps flashing on the dashboard",
+   "text_roman": "Dashboard par security ya chaabi ki light jhapakti rehti hai",
+   "text_ur": "",
+   "is_safety_critical": false,
+   "is_observable": true,
+   "is_generic": false
+  }
+ },
+ {
+  "model": "knowledge.cause",
+  "pk": 300101,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "name": "Weak or dead battery",
+   "system": "electrical",
+   "description": "The battery cannot supply enough current to crank the engine.",
+   "proof_hint": "Ask the mechanic to show the test or measurement that confirms: weak or dead battery.",
+   "prior": "0.350",
+   "severity": "medium",
+   "safe_to_drive": true,
+   "car_models": []
+  }
+ },
+ {
+  "model": "knowledge.selfcheck",
+  "pk": 304001,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300101,
+   "steps": "Try the headlights: if they are dim or die when you turn the key, the battery is weak. A jump-start that works confirms it.",
+   "tools_needed": "Jumper cables",
+   "difficulty": "easy"
+  }
+ },
+ {
+  "model": "knowledge.repaircost",
+  "pk": 303001,
+  "fields": {
+   "status": "draft",
+   "is_dummy": true,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300101,
+   "city": "Lahore",
+   "parts_min": 12000,
+   "parts_max": 30000,
+   "labour_min": 0,
+   "labour_max": 1000,
+   "last_verified": "2026-10-30",
+   "source": "PLACEHOLDER - replace with a verified quote"
+  }
+ },
+ {
+  "model": "knowledge.cause",
+  "pk": 300102,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "name": "Loose or corroded battery terminals",
+   "system": "electrical",
+   "description": "Poor contact at the terminals blocks current even with a good battery.",
+   "proof_hint": "Ask the mechanic to show the test or measurement that confirms: loose or corroded battery terminals.",
+   "prior": "0.150",
+   "severity": "low",
+   "safe_to_drive": true,
+   "car_models": []
+  }
+ },
+ {
+  "model": "knowledge.selfcheck",
+  "pk": 304002,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300102,
+   "steps": "With the car off, check that both terminals are tight and free of white or green crust.",
+   "tools_needed": "Spanner, wire brush",
+   "difficulty": "easy"
+  }
+ },
+ {
+  "model": "knowledge.repaircost",
+  "pk": 303002,
+  "fields": {
+   "status": "draft",
+   "is_dummy": true,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300102,
+   "city": "Lahore",
+   "parts_min": 0,
+   "parts_max": 500,
+   "labour_min": 500,
+   "labour_max": 1500,
+   "last_verified": "2026-10-30",
+   "source": "PLACEHOLDER - replace with a verified quote"
+  }
+ },
+ {
+  "model": "knowledge.cause",
+  "pk": 300103,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "name": "Faulty starter motor or solenoid",
+   "system": "electrical",
+   "description": "The starter does not turn the engine even though the battery is good.",
+   "proof_hint": "Ask the mechanic to show the test or measurement that confirms: faulty starter motor or solenoid.",
+   "prior": "0.200",
+   "severity": "medium",
+   "safe_to_drive": true,
+   "car_models": []
+  }
+ },
+ {
+  "model": "knowledge.selfcheck",
+  "pk": 304003,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300103,
+   "steps": "If lights stay bright but you only hear one loud click, the starter is the likely cause.",
+   "tools_needed": "None",
+   "difficulty": "medium"
+  }
+ },
+ {
+  "model": "knowledge.repaircost",
+  "pk": 303003,
+  "fields": {
+   "status": "draft",
+   "is_dummy": true,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300103,
+   "city": "Lahore",
+   "parts_min": 10000,
+   "parts_max": 35000,
+   "labour_min": 2000,
+   "labour_max": 5000,
+   "last_verified": "2026-10-30",
+   "source": "PLACEHOLDER - replace with a verified quote"
+  }
+ },
+ {
+  "model": "knowledge.cause",
+  "pk": 300104,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "name": "Failed fuel pump or fuel pump relay",
+   "system": "fuel",
+   "description": "The engine cranks but no fuel reaches it.",
+   "proof_hint": "Ask the mechanic to show the test or measurement that confirms: failed fuel pump or fuel pump relay.",
+   "prior": "0.200",
+   "severity": "medium",
+   "safe_to_drive": true,
+   "car_models": []
+  }
+ },
+ {
+  "model": "knowledge.selfcheck",
+  "pk": 304004,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300104,
+   "steps": "Switch the ignition on and listen near the rear seat for a 2 second hum. Silence points to the pump, relay or fuse.",
+   "tools_needed": "None",
+   "difficulty": "medium"
+  }
+ },
+ {
+  "model": "knowledge.repaircost",
+  "pk": 303004,
+  "fields": {
+   "status": "draft",
+   "is_dummy": true,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300104,
+   "city": "Lahore",
+   "parts_min": 8000,
+   "parts_max": 40000,
+   "labour_min": 2000,
+   "labour_max": 6000,
+   "last_verified": "2026-10-30",
+   "source": "PLACEHOLDER - replace with a verified quote"
+  }
+ },
+ {
+  "model": "knowledge.cause",
+  "pk": 300105,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "name": "Immobiliser or key fault",
+   "system": "electrical",
+   "description": "The car does not recognise the key and blocks starting.",
+   "proof_hint": "Ask the mechanic to show the test or measurement that confirms: immobiliser or key fault.",
+   "prior": "0.100",
+   "severity": "medium",
+   "safe_to_drive": true,
+   "car_models": []
+  }
+ },
+ {
+  "model": "knowledge.selfcheck",
+  "pk": 304005,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300105,
+   "steps": "Try the spare key and check whether the security light flashes.",
+   "tools_needed": "Spare key",
+   "difficulty": "easy"
+  }
+ },
+ {
+  "model": "knowledge.repaircost",
+  "pk": 303005,
+  "fields": {
+   "status": "draft",
+   "is_dummy": true,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300105,
+   "city": "Lahore",
+   "parts_min": 3000,
+   "parts_max": 25000,
+   "labour_min": 1000,
+   "labour_max": 4000,
+   "last_verified": "2026-10-30",
+   "source": "PLACEHOLDER - replace with a verified quote"
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301001,
+  "fields": {
+   "cause": 300101,
+   "symptom": 102125,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301002,
+  "fields": {
+   "cause": 300101,
+   "symptom": 300002,
+   "strength": "always",
+   "weight": "0.90",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301003,
+  "fields": {
+   "cause": 300101,
+   "symptom": 300001,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301004,
+  "fields": {
+   "cause": 300101,
+   "symptom": 300003,
+   "strength": "sometimes",
+   "weight": "0.40",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301005,
+  "fields": {
+   "cause": 300101,
+   "symptom": 100172,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301006,
+  "fields": {
+   "cause": 300101,
+   "symptom": 101715,
+   "strength": "sometimes",
+   "weight": "0.40",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301007,
+  "fields": {
+   "cause": 300102,
+   "symptom": 102125,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301008,
+  "fields": {
+   "cause": 300102,
+   "symptom": 300001,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301009,
+  "fields": {
+   "cause": 300102,
+   "symptom": 300002,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301010,
+  "fields": {
+   "cause": 300102,
+   "symptom": 300003,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301011,
+  "fields": {
+   "cause": 300102,
+   "symptom": 101715,
+   "strength": "rarely",
+   "weight": "0.10",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301012,
+  "fields": {
+   "cause": 300103,
+   "symptom": 102125,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301013,
+  "fields": {
+   "cause": 300103,
+   "symptom": 300001,
+   "strength": "always",
+   "weight": "0.90",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301014,
+  "fields": {
+   "cause": 300103,
+   "symptom": 300003,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301015,
+  "fields": {
+   "cause": 300103,
+   "symptom": 300002,
+   "strength": "rarely",
+   "weight": "0.10",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301016,
+  "fields": {
+   "cause": 300104,
+   "symptom": 102125,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301017,
+  "fields": {
+   "cause": 300104,
+   "symptom": 100781,
+   "strength": "always",
+   "weight": "0.90",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301018,
+  "fields": {
+   "cause": 300104,
+   "symptom": 300004,
+   "strength": "always",
+   "weight": "0.90",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301019,
+  "fields": {
+   "cause": 300104,
+   "symptom": 101715,
+   "strength": "sometimes",
+   "weight": "0.40",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301020,
+  "fields": {
+   "cause": 300105,
+   "symptom": 102125,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301021,
+  "fields": {
+   "cause": 300105,
+   "symptom": 100781,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301022,
+  "fields": {
+   "cause": 300105,
+   "symptom": 300005,
+   "strength": "always",
+   "weight": "0.90",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300201,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 102125,
+   "text_en": "When you turn the key, what happens?",
+   "text_roman": "Chaabi ghumane par kya hota hai?",
+   "text_ur": "",
+   "type": "single_choice",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": true,
+   "triage_order": 1,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302001,
+  "fields": {
+   "question": 300201,
+   "label": "Nothing at all",
+   "label_roman": "Kuch bhi nahi hota",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": 300003,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302002,
+  "fields": {
+   "question": 300201,
+   "label": "Only a click or dim lights",
+   "label_roman": "Sirf click ya dheemi lights",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": 300001,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302003,
+  "fields": {
+   "question": 300201,
+   "label": "The engine cranks but will not start",
+   "label_roman": "Engine ghoomta hai lekin start nahi hota",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": 100781,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302004,
+  "fields": {
+   "question": 300201,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300202,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 300002,
+   "text_en": "Do the dashboard lights dim or go out when you turn the key?",
+   "text_roman": "Kya chaabi ghumane par dashboard ki lights dheemi ya band ho jati hain?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302005,
+  "fields": {
+   "question": 300202,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302006,
+  "fields": {
+   "question": 300202,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302007,
+  "fields": {
+   "question": 300202,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300203,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 300001,
+   "text_en": "Do you hear only a clicking sound when you turn the key?",
+   "text_roman": "Kya chaabi ghumane par sirf click ki awaaz aati hai?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302008,
+  "fields": {
+   "question": 300203,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302009,
+  "fields": {
+   "question": 300203,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302010,
+  "fields": {
+   "question": 300203,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300204,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 300003,
+   "text_en": "Does nothing at all happen when you turn the key?",
+   "text_roman": "Kya chaabi ghumane par bilkul kuch nahi hota?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302011,
+  "fields": {
+   "question": 300204,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302012,
+  "fields": {
+   "question": 300204,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302013,
+  "fields": {
+   "question": 300204,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300205,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 100781,
+   "text_en": "Does the engine turn over (crank) but never catch and run?",
+   "text_roman": "Kya engine ghoomta hai lekin kabhi chalu nahi hota?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302014,
+  "fields": {
+   "question": 300205,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302015,
+  "fields": {
+   "question": 300205,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302016,
+  "fields": {
+   "question": 300205,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300206,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 300004,
+   "text_en": "With the ignition on, is the fuel pump silent (no short hum for about 2 seconds)?",
+   "text_roman": "Ignition on karne par kya fuel pump ki halki awaaz nahi aati?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302017,
+  "fields": {
+   "question": 300206,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302018,
+  "fields": {
+   "question": 300206,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302019,
+  "fields": {
+   "question": 300206,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300207,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 300005,
+   "text_en": "Is a security or key light flashing on the dashboard?",
+   "text_roman": "Kya dashboard par security ya chaabi ki light jhapak rahi hai?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302020,
+  "fields": {
+   "question": 300207,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302021,
+  "fields": {
+   "question": 300207,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302022,
+  "fields": {
+   "question": 300207,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300208,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 101715,
+   "text_en": "Does the engine crank for much longer than usual before it starts?",
+   "text_roman": "Kya engine start hone se pehle normal se zyada der ghoomta hai?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302023,
+  "fields": {
+   "question": 300208,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302024,
+  "fields": {
+   "question": 300208,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302025,
+  "fields": {
+   "question": 300208,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300209,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 100172,
+   "text_en": "Has the battery been weak lately, especially on cold mornings?",
+   "text_roman": "Kya battery haal hi mein kamzor rahi hai, khaas tor par thandi subah mein?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302026,
+  "fields": {
+   "question": 300209,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302027,
+  "fields": {
+   "question": 300209,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302028,
+  "fields": {
+   "question": 300209,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.symptom",
+  "pk": 300010,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "key": "temperature-gauge-climbs-high",
+   "category": 9003,
+   "text_en": "Temperature gauge climbs above the middle",
+   "text_roman": "Temperature gauge beech se upar chala jata hai",
+   "text_ur": "",
+   "is_safety_critical": false,
+   "is_observable": true,
+   "is_generic": false
+  }
+ },
+ {
+  "model": "knowledge.symptom",
+  "pk": 300011,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "key": "steam-from-under-bonnet",
+   "category": 9003,
+   "text_en": "Steam or smoke coming from under the bonnet",
+   "text_roman": "Bonnet ke neeche se bhaap ya dhuan nikalta hai",
+   "text_ur": "",
+   "is_safety_critical": true,
+   "is_observable": true,
+   "is_generic": false
+  }
+ },
+ {
+  "model": "knowledge.symptom",
+  "pk": 300012,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "key": "heater-cold-engine-hot",
+   "category": 9003,
+   "text_en": "Heater blows cold air while the engine is hot",
+   "text_roman": "Engine garam hone par bhi heater thandi hawa deta hai",
+   "text_ur": "",
+   "is_safety_critical": false,
+   "is_observable": true,
+   "is_generic": false
+  }
+ },
+ {
+  "model": "knowledge.cause",
+  "pk": 300106,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "name": "Low coolant or a coolant leak",
+   "system": "cooling",
+   "description": "Not enough coolant is left to carry heat away from the engine.",
+   "proof_hint": "Ask the mechanic to show the test or measurement that confirms: low coolant or a coolant leak.",
+   "prior": "0.300",
+   "severity": "high",
+   "safe_to_drive": true,
+   "car_models": []
+  }
+ },
+ {
+  "model": "knowledge.selfcheck",
+  "pk": 304006,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300106,
+   "steps": "When the engine is completely cold, check the coolant tank level and look under the car for drips.",
+   "tools_needed": "Torch",
+   "difficulty": "easy"
+  }
+ },
+ {
+  "model": "knowledge.repaircost",
+  "pk": 303006,
+  "fields": {
+   "status": "draft",
+   "is_dummy": true,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300106,
+   "city": "Lahore",
+   "parts_min": 500,
+   "parts_max": 8000,
+   "labour_min": 500,
+   "labour_max": 3000,
+   "last_verified": "2026-10-30",
+   "source": "PLACEHOLDER - replace with a verified quote"
+  }
+ },
+ {
+  "model": "knowledge.cause",
+  "pk": 300107,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "name": "Stuck thermostat",
+   "system": "cooling",
+   "description": "The thermostat stays closed and traps hot coolant in the engine.",
+   "proof_hint": "Ask the mechanic to show the test or measurement that confirms: stuck thermostat.",
+   "prior": "0.150",
+   "severity": "medium",
+   "safe_to_drive": true,
+   "car_models": []
+  }
+ },
+ {
+  "model": "knowledge.selfcheck",
+  "pk": 304007,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300107,
+   "steps": "With the engine hot, the upper radiator hose is hot but the lower hose stays cold.",
+   "tools_needed": "None",
+   "difficulty": "medium"
+  }
+ },
+ {
+  "model": "knowledge.repaircost",
+  "pk": 303007,
+  "fields": {
+   "status": "draft",
+   "is_dummy": true,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300107,
+   "city": "Lahore",
+   "parts_min": 1500,
+   "parts_max": 5000,
+   "labour_min": 1500,
+   "labour_max": 4000,
+   "last_verified": "2026-10-30",
+   "source": "PLACEHOLDER - replace with a verified quote"
+  }
+ },
+ {
+  "model": "knowledge.cause",
+  "pk": 300108,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "name": "Radiator fan or fan relay failure",
+   "system": "cooling",
+   "description": "The fan does not blow air through the radiator when the car is stopped.",
+   "proof_hint": "Ask the mechanic to show the test or measurement that confirms: radiator fan or fan relay failure.",
+   "prior": "0.200",
+   "severity": "medium",
+   "safe_to_drive": true,
+   "car_models": []
+  }
+ },
+ {
+  "model": "knowledge.selfcheck",
+  "pk": 304008,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300108,
+   "steps": "Let the engine warm up at idle: the fan should start within a few minutes. If it never does, check the fuse and relay.",
+   "tools_needed": "None",
+   "difficulty": "medium"
+  }
+ },
+ {
+  "model": "knowledge.repaircost",
+  "pk": 303008,
+  "fields": {
+   "status": "draft",
+   "is_dummy": true,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300108,
+   "city": "Lahore",
+   "parts_min": 3000,
+   "parts_max": 15000,
+   "labour_min": 1500,
+   "labour_max": 4000,
+   "last_verified": "2026-10-30",
+   "source": "PLACEHOLDER - replace with a verified quote"
+  }
+ },
+ {
+  "model": "knowledge.cause",
+  "pk": 300109,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "name": "Failing water pump",
+   "system": "cooling",
+   "description": "The pump does not circulate coolant properly.",
+   "proof_hint": "Ask the mechanic to show the test or measurement that confirms: failing water pump.",
+   "prior": "0.100",
+   "severity": "high",
+   "safe_to_drive": false,
+   "car_models": []
+  }
+ },
+ {
+  "model": "knowledge.selfcheck",
+  "pk": 304009,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300109,
+   "steps": "Look for coolant leaking from the pump or a whining noise at the front of the engine.",
+   "tools_needed": "Torch",
+   "difficulty": "hard"
+  }
+ },
+ {
+  "model": "knowledge.repaircost",
+  "pk": 303009,
+  "fields": {
+   "status": "draft",
+   "is_dummy": true,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300109,
+   "city": "Lahore",
+   "parts_min": 5000,
+   "parts_max": 20000,
+   "labour_min": 4000,
+   "labour_max": 9000,
+   "last_verified": "2026-10-30",
+   "source": "PLACEHOLDER - replace with a verified quote"
+  }
+ },
+ {
+  "model": "knowledge.cause",
+  "pk": 300110,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "name": "Head gasket leak",
+   "system": "engine",
+   "description": "Combustion gases or coolant leak between the engine block and head.",
+   "proof_hint": "Ask the mechanic to show the test or measurement that confirms: head gasket leak.",
+   "prior": "0.100",
+   "severity": "critical",
+   "safe_to_drive": false,
+   "car_models": []
+  }
+ },
+ {
+  "model": "knowledge.selfcheck",
+  "pk": 304010,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300110,
+   "steps": "Look for white exhaust smoke, milky oil on the dipstick or constantly bubbling coolant.",
+   "tools_needed": "None",
+   "difficulty": "hard"
+  }
+ },
+ {
+  "model": "knowledge.repaircost",
+  "pk": 303010,
+  "fields": {
+   "status": "draft",
+   "is_dummy": true,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300110,
+   "city": "Lahore",
+   "parts_min": 8000,
+   "parts_max": 30000,
+   "labour_min": 25000,
+   "labour_max": 60000,
+   "last_verified": "2026-10-30",
+   "source": "PLACEHOLDER - replace with a verified quote"
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301023,
+  "fields": {
+   "cause": 300106,
+   "symptom": 300010,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301024,
+  "fields": {
+   "cause": 300106,
+   "symptom": 100549,
+   "strength": "always",
+   "weight": "0.90",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301025,
+  "fields": {
+   "cause": 300106,
+   "symptom": 300011,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301026,
+  "fields": {
+   "cause": 300106,
+   "symptom": 300012,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301027,
+  "fields": {
+   "cause": 300106,
+   "symptom": 103354,
+   "strength": "sometimes",
+   "weight": "0.40",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301028,
+  "fields": {
+   "cause": 300107,
+   "symptom": 300010,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301029,
+  "fields": {
+   "cause": 300107,
+   "symptom": 300012,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301030,
+  "fields": {
+   "cause": 300107,
+   "symptom": 102851,
+   "strength": "rarely",
+   "weight": "0.10",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301031,
+  "fields": {
+   "cause": 300108,
+   "symptom": 100940,
+   "strength": "always",
+   "weight": "0.90",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301032,
+  "fields": {
+   "cause": 300108,
+   "symptom": 103354,
+   "strength": "always",
+   "weight": "0.90",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301033,
+  "fields": {
+   "cause": 300108,
+   "symptom": 102851,
+   "strength": "always",
+   "weight": "0.90",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301034,
+  "fields": {
+   "cause": 300108,
+   "symptom": 300010,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301035,
+  "fields": {
+   "cause": 300109,
+   "symptom": 300010,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301036,
+  "fields": {
+   "cause": 300109,
+   "symptom": 300011,
+   "strength": "sometimes",
+   "weight": "0.40",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301037,
+  "fields": {
+   "cause": 300109,
+   "symptom": 100549,
+   "strength": "sometimes",
+   "weight": "0.40",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301038,
+  "fields": {
+   "cause": 300109,
+   "symptom": 300012,
+   "strength": "sometimes",
+   "weight": "0.40",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301039,
+  "fields": {
+   "cause": 300110,
+   "symptom": 300010,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301040,
+  "fields": {
+   "cause": 300110,
+   "symptom": 300011,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301041,
+  "fields": {
+   "cause": 300110,
+   "symptom": 100549,
+   "strength": "sometimes",
+   "weight": "0.40",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301042,
+  "fields": {
+   "cause": 300110,
+   "symptom": 300012,
+   "strength": "sometimes",
+   "weight": "0.40",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300210,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 300010,
+   "text_en": "When does the temperature rise?",
+   "text_roman": "Temperature kab barhta hai?",
+   "text_ur": "",
+   "type": "single_choice",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": true,
+   "triage_order": 1,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302029,
+  "fields": {
+   "question": 300210,
+   "label": "Mostly when stopped or in traffic",
+   "label_roman": "Zyada tar ruke hue ya traffic mein",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": 103354,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302030,
+  "fields": {
+   "question": 300210,
+   "label": "Also while driving at speed",
+   "label_roman": "Raftaar par chalte hue bhi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": 300010,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302031,
+  "fields": {
+   "question": 300210,
+   "label": "Mainly with the AC on",
+   "label_roman": "Zyada tar AC chalne par",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": 102851,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302032,
+  "fields": {
+   "question": 300210,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300211,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 100940,
+   "text_en": "When the engine is hot, does the cooling fan stay off?",
+   "text_roman": "Engine garam hone par kya cooling fan band rehta hai?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302033,
+  "fields": {
+   "question": 300211,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302034,
+  "fields": {
+   "question": 300211,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302035,
+  "fields": {
+   "question": 300211,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300212,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 100549,
+   "text_en": "Is the coolant tank low, or do you see coolant under the car or smell something sweet?",
+   "text_roman": "Kya coolant ka tank kam hai, ya gaari ke neeche coolant ya meethi boo hai?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302036,
+  "fields": {
+   "question": 300212,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302037,
+  "fields": {
+   "question": 300212,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302038,
+  "fields": {
+   "question": 300212,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300213,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 300011,
+   "text_en": "Do you see steam or smoke coming from under the bonnet?",
+   "text_roman": "Kya bonnet ke neeche se bhaap ya dhuan nikal raha hai?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302039,
+  "fields": {
+   "question": 300213,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302040,
+  "fields": {
+   "question": 300213,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302041,
+  "fields": {
+   "question": 300213,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300214,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 300012,
+   "text_en": "Does the heater blow cold air while the engine is hot?",
+   "text_roman": "Kya engine garam hone par bhi heater thandi hawa deta hai?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302042,
+  "fields": {
+   "question": 300214,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302043,
+  "fields": {
+   "question": 300214,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302044,
+  "fields": {
+   "question": 300214,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300215,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 300010,
+   "text_en": "Does the temperature gauge climb above the middle mark?",
+   "text_roman": "Kya temperature gauge beech ke nishan se upar jata hai?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302045,
+  "fields": {
+   "question": 300215,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302046,
+  "fields": {
+   "question": 300215,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302047,
+  "fields": {
+   "question": 300215,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300216,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 103354,
+   "text_en": "Does the temperature mainly rise when the car is stopped or idling in traffic?",
+   "text_roman": "Kya temperature zyada tar ruke hue ya traffic mein barhta hai?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302048,
+  "fields": {
+   "question": 300216,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302049,
+  "fields": {
+   "question": 300216,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302050,
+  "fields": {
+   "question": 300216,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.symptom",
+  "pk": 300021,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "key": "shaking-when-braking",
+   "category": 9005,
+   "text_en": "Steering wheel or brake pedal shakes when braking",
+   "text_roman": "Brake lagane par steering ya brake pedal hilta hai",
+   "text_ur": "",
+   "is_safety_critical": false,
+   "is_observable": true,
+   "is_generic": false
+  }
+ },
+ {
+  "model": "knowledge.symptom",
+  "pk": 300022,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "key": "squealing-when-braking",
+   "category": 9005,
+   "text_en": "Squealing or screeching noise when braking",
+   "text_roman": "Brake lagane par cheekhne ki awaaz aati hai",
+   "text_ur": "",
+   "is_safety_critical": false,
+   "is_observable": true,
+   "is_generic": false
+  }
+ },
+ {
+  "model": "knowledge.symptom",
+  "pk": 300023,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "key": "grinding-when-braking",
+   "category": 9005,
+   "text_en": "Grinding noise when braking",
+   "text_roman": "Brake lagane par ragadne ki awaaz aati hai",
+   "text_ur": "",
+   "is_safety_critical": false,
+   "is_observable": true,
+   "is_generic": false
+  }
+ },
+ {
+  "model": "knowledge.symptom",
+  "pk": 300024,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "key": "brake-pedal-soft",
+   "category": 9005,
+   "text_en": "Brake pedal feels soft or sinks toward the floor",
+   "text_roman": "Brake pedal naram lagta hai ya neeche tak chala jata hai",
+   "text_ur": "",
+   "is_safety_critical": true,
+   "is_observable": true,
+   "is_generic": false
+  }
+ },
+ {
+  "model": "knowledge.symptom",
+  "pk": 300025,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "key": "pulls-to-one-side-braking",
+   "category": 9005,
+   "text_en": "Car pulls to one side when braking",
+   "text_roman": "Brake lagane par gaari aik taraf kheenchti hai",
+   "text_ur": "",
+   "is_safety_critical": false,
+   "is_observable": true,
+   "is_generic": false
+  }
+ },
+ {
+  "model": "knowledge.cause",
+  "pk": 300111,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "name": "Warped brake discs",
+   "system": "brakes",
+   "description": "Uneven discs make the pedal and steering shake under braking.",
+   "proof_hint": "Ask the mechanic to show the test or measurement that confirms: warped brake discs.",
+   "prior": "0.300",
+   "severity": "medium",
+   "safe_to_drive": true,
+   "car_models": []
+  }
+ },
+ {
+  "model": "knowledge.selfcheck",
+  "pk": 304011,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300111,
+   "steps": "Brake gently from about 80 km/h on a clear road: shaking that grows with speed points to the discs.",
+   "tools_needed": "None",
+   "difficulty": "easy"
+  }
+ },
+ {
+  "model": "knowledge.repaircost",
+  "pk": 303011,
+  "fields": {
+   "status": "draft",
+   "is_dummy": true,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300111,
+   "city": "Lahore",
+   "parts_min": 6000,
+   "parts_max": 25000,
+   "labour_min": 2000,
+   "labour_max": 5000,
+   "last_verified": "2026-10-30",
+   "source": "PLACEHOLDER - replace with a verified quote"
+  }
+ },
+ {
+  "model": "knowledge.cause",
+  "pk": 300112,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "name": "Worn brake pads",
+   "system": "brakes",
+   "description": "Thin pads squeal, then grind against the disc.",
+   "proof_hint": "Ask the mechanic to show the test or measurement that confirms: worn brake pads.",
+   "prior": "0.350",
+   "severity": "medium",
+   "safe_to_drive": true,
+   "car_models": []
+  }
+ },
+ {
+  "model": "knowledge.selfcheck",
+  "pk": 304012,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300112,
+   "steps": "Look through the wheel spokes at the pad thickness. Under about 3 mm means replace.",
+   "tools_needed": "Torch",
+   "difficulty": "easy"
+  }
+ },
+ {
+  "model": "knowledge.repaircost",
+  "pk": 303012,
+  "fields": {
+   "status": "draft",
+   "is_dummy": true,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300112,
+   "city": "Lahore",
+   "parts_min": 3000,
+   "parts_max": 12000,
+   "labour_min": 1000,
+   "labour_max": 3000,
+   "last_verified": "2026-10-30",
+   "source": "PLACEHOLDER - replace with a verified quote"
+  }
+ },
+ {
+  "model": "knowledge.cause",
+  "pk": 300113,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "name": "Seized brake caliper",
+   "system": "brakes",
+   "description": "A stuck caliper drags on one wheel and pulls the car sideways.",
+   "proof_hint": "Ask the mechanic to show the test or measurement that confirms: seized brake caliper.",
+   "prior": "0.100",
+   "severity": "high",
+   "safe_to_drive": true,
+   "car_models": []
+  }
+ },
+ {
+  "model": "knowledge.selfcheck",
+  "pk": 304013,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300113,
+   "steps": "After a drive, one wheel hub being much hotter than the others suggests a seized caliper.",
+   "tools_needed": "None",
+   "difficulty": "medium"
+  }
+ },
+ {
+  "model": "knowledge.repaircost",
+  "pk": 303013,
+  "fields": {
+   "status": "draft",
+   "is_dummy": true,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300113,
+   "city": "Lahore",
+   "parts_min": 5000,
+   "parts_max": 20000,
+   "labour_min": 2000,
+   "labour_max": 5000,
+   "last_verified": "2026-10-30",
+   "source": "PLACEHOLDER - replace with a verified quote"
+  }
+ },
+ {
+  "model": "knowledge.cause",
+  "pk": 300114,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "name": "Brake fluid leak or air in the brake lines",
+   "system": "brakes",
+   "description": "Lost pressure in the brake system makes the pedal soft.",
+   "proof_hint": "Ask the mechanic to show the test or measurement that confirms: brake fluid leak or air in the brake lines.",
+   "prior": "0.100",
+   "severity": "critical",
+   "safe_to_drive": false,
+   "car_models": []
+  }
+ },
+ {
+  "model": "knowledge.selfcheck",
+  "pk": 304014,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300114,
+   "steps": "Check the brake fluid level and look for wet patches behind the wheels. Do not drive if the pedal sinks.",
+   "tools_needed": "Torch",
+   "difficulty": "medium"
+  }
+ },
+ {
+  "model": "knowledge.repaircost",
+  "pk": 303014,
+  "fields": {
+   "status": "draft",
+   "is_dummy": true,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300114,
+   "city": "Lahore",
+   "parts_min": 2000,
+   "parts_max": 15000,
+   "labour_min": 2000,
+   "labour_max": 6000,
+   "last_verified": "2026-10-30",
+   "source": "PLACEHOLDER - replace with a verified quote"
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301043,
+  "fields": {
+   "cause": 300111,
+   "symptom": 300021,
+   "strength": "always",
+   "weight": "0.90",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301044,
+  "fields": {
+   "cause": 300111,
+   "symptom": 300025,
+   "strength": "rarely",
+   "weight": "0.10",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301045,
+  "fields": {
+   "cause": 300111,
+   "symptom": 300022,
+   "strength": "rarely",
+   "weight": "0.10",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301046,
+  "fields": {
+   "cause": 300112,
+   "symptom": 300022,
+   "strength": "always",
+   "weight": "0.90",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301047,
+  "fields": {
+   "cause": 300112,
+   "symptom": 300023,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301048,
+  "fields": {
+   "cause": 300112,
+   "symptom": 300021,
+   "strength": "sometimes",
+   "weight": "0.40",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301049,
+  "fields": {
+   "cause": 300112,
+   "symptom": 300024,
+   "strength": "rarely",
+   "weight": "0.10",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301050,
+  "fields": {
+   "cause": 300113,
+   "symptom": 300025,
+   "strength": "always",
+   "weight": "0.90",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301051,
+  "fields": {
+   "cause": 300113,
+   "symptom": 300021,
+   "strength": "sometimes",
+   "weight": "0.40",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301052,
+  "fields": {
+   "cause": 300113,
+   "symptom": 300022,
+   "strength": "sometimes",
+   "weight": "0.40",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301053,
+  "fields": {
+   "cause": 300113,
+   "symptom": 300023,
+   "strength": "sometimes",
+   "weight": "0.40",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301054,
+  "fields": {
+   "cause": 300114,
+   "symptom": 300024,
+   "strength": "always",
+   "weight": "0.90",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301055,
+  "fields": {
+   "cause": 300114,
+   "symptom": 300025,
+   "strength": "sometimes",
+   "weight": "0.40",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301056,
+  "fields": {
+   "cause": 300114,
+   "symptom": 300021,
+   "strength": "rarely",
+   "weight": "0.10",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300217,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 300022,
+   "text_en": "What do you notice when you brake?",
+   "text_roman": "Brake lagane par aap ko kya mehsoos hota hai?",
+   "text_ur": "",
+   "type": "single_choice",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": true,
+   "triage_order": 1,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302051,
+  "fields": {
+   "question": 300217,
+   "label": "Shaking in the pedal or steering",
+   "label_roman": "Pedal ya steering mein hilna",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": 300021,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302052,
+  "fields": {
+   "question": 300217,
+   "label": "Squealing or screeching",
+   "label_roman": "Cheekhne ki awaaz",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": 300022,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302053,
+  "fields": {
+   "question": 300217,
+   "label": "Grinding",
+   "label_roman": "Ragadne ki awaaz",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": 300023,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302054,
+  "fields": {
+   "question": 300217,
+   "label": "The pedal feels soft or sinks",
+   "label_roman": "Pedal naram lagta hai ya neeche jata hai",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": 300024,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302055,
+  "fields": {
+   "question": 300217,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300218,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 300021,
+   "text_en": "Does the steering wheel or brake pedal shake when you brake from speed?",
+   "text_roman": "Kya raftaar se brake lagane par steering ya pedal hilta hai?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302056,
+  "fields": {
+   "question": 300218,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302057,
+  "fields": {
+   "question": 300218,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302058,
+  "fields": {
+   "question": 300218,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300219,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 300022,
+   "text_en": "Do you hear a squealing or screeching noise when you brake?",
+   "text_roman": "Kya brake lagane par cheekhne ki awaaz aati hai?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302059,
+  "fields": {
+   "question": 300219,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302060,
+  "fields": {
+   "question": 300219,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302061,
+  "fields": {
+   "question": 300219,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300220,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 300023,
+   "text_en": "Do you hear a metal grinding noise when you brake?",
+   "text_roman": "Kya brake lagane par dhaat ke ragadne ki awaaz aati hai?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302062,
+  "fields": {
+   "question": 300220,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302063,
+  "fields": {
+   "question": 300220,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302064,
+  "fields": {
+   "question": 300220,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300221,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 300025,
+   "text_en": "Does the car pull to one side when you brake?",
+   "text_roman": "Kya brake lagane par gaari aik taraf kheenchti hai?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302065,
+  "fields": {
+   "question": 300221,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302066,
+  "fields": {
+   "question": 300221,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302067,
+  "fields": {
+   "question": 300221,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300222,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 300024,
+   "text_en": "Does the brake pedal feel soft or sink toward the floor?",
+   "text_roman": "Kya brake pedal naram lagta hai ya neeche tak chala jata hai?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302068,
+  "fields": {
+   "question": 300222,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302069,
+  "fields": {
+   "question": 300222,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302070,
+  "fields": {
+   "question": 300222,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.symptom",
+  "pk": 300031,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "key": "ac-compressor-no-click",
+   "category": 9009,
+   "text_en": "No click from the engine bay when the AC is switched on",
+   "text_roman": "AC on karne par engine bay se click ki awaaz nahi aati",
+   "text_ur": "",
+   "is_safety_critical": false,
+   "is_observable": true,
+   "is_generic": false
+  }
+ },
+ {
+  "model": "knowledge.symptom",
+  "pk": 300032,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "key": "weak-airflow-vents",
+   "category": 9009,
+   "text_en": "Weak airflow from the vents even at full fan speed",
+   "text_roman": "Poori fan speed par bhi vents se hawa kamzor aati hai",
+   "text_ur": "",
+   "is_safety_critical": false,
+   "is_observable": true,
+   "is_generic": false
+  }
+ },
+ {
+  "model": "knowledge.symptom",
+  "pk": 300033,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "key": "ac-cold-only-while-driving",
+   "category": 9009,
+   "text_en": "AC is cold while driving but warm when stopped",
+   "text_roman": "AC chalte hue thanda hai lekin ruke hue garam",
+   "text_ur": "",
+   "is_safety_critical": false,
+   "is_observable": true,
+   "is_generic": false
+  }
+ },
+ {
+  "model": "knowledge.symptom",
+  "pk": 300034,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "key": "hissing-or-oily-ac-pipes",
+   "category": 9009,
+   "text_en": "Hissing sound or oily residue near the AC pipes",
+   "text_roman": "AC ke pipes ke qareeb hissing ya tel jaisa nishan",
+   "text_ur": "",
+   "is_safety_critical": false,
+   "is_observable": true,
+   "is_generic": false
+  }
+ },
+ {
+  "model": "knowledge.cause",
+  "pk": 300115,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "name": "Low refrigerant or a leak in the AC system",
+   "system": "ac",
+   "description": "Not enough gas is left to cool the air.",
+   "proof_hint": "Ask the mechanic to show the test or measurement that confirms: low refrigerant or a leak in the ac system.",
+   "prior": "0.400",
+   "severity": "low",
+   "safe_to_drive": true,
+   "car_models": []
+  }
+ },
+ {
+  "model": "knowledge.selfcheck",
+  "pk": 304015,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300115,
+   "steps": "Look for oily patches on AC pipe joints. A gas refill that fades in weeks means there is a leak.",
+   "tools_needed": "Torch",
+   "difficulty": "medium"
+  }
+ },
+ {
+  "model": "knowledge.repaircost",
+  "pk": 303015,
+  "fields": {
+   "status": "draft",
+   "is_dummy": true,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300115,
+   "city": "Lahore",
+   "parts_min": 2000,
+   "parts_max": 8000,
+   "labour_min": 1000,
+   "labour_max": 3000,
+   "last_verified": "2026-10-30",
+   "source": "PLACEHOLDER - replace with a verified quote"
+  }
+ },
+ {
+  "model": "knowledge.cause",
+  "pk": 300116,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "name": "Compressor or compressor clutch failure",
+   "system": "ac",
+   "description": "The compressor does not pump gas around the system.",
+   "proof_hint": "Ask the mechanic to show the test or measurement that confirms: compressor or compressor clutch failure.",
+   "prior": "0.150",
+   "severity": "medium",
+   "safe_to_drive": true,
+   "car_models": []
+  }
+ },
+ {
+  "model": "knowledge.selfcheck",
+  "pk": 304016,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300116,
+   "steps": "With the AC on, the centre of the compressor pulley should spin. If it does not, the clutch is not engaging.",
+   "tools_needed": "None",
+   "difficulty": "hard"
+  }
+ },
+ {
+  "model": "knowledge.repaircost",
+  "pk": 303016,
+  "fields": {
+   "status": "draft",
+   "is_dummy": true,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300116,
+   "city": "Lahore",
+   "parts_min": 15000,
+   "parts_max": 50000,
+   "labour_min": 4000,
+   "labour_max": 9000,
+   "last_verified": "2026-10-30",
+   "source": "PLACEHOLDER - replace with a verified quote"
+  }
+ },
+ {
+  "model": "knowledge.cause",
+  "pk": 300117,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "name": "Condenser fan not working",
+   "system": "ac",
+   "description": "Without airflow over the condenser the AC fades at idle.",
+   "proof_hint": "Ask the mechanic to show the test or measurement that confirms: condenser fan not working.",
+   "prior": "0.150",
+   "severity": "low",
+   "safe_to_drive": true,
+   "car_models": []
+  }
+ },
+ {
+  "model": "knowledge.selfcheck",
+  "pk": 304017,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300117,
+   "steps": "At idle with the AC on, the front fan should run. If it is still, check its fuse and relay.",
+   "tools_needed": "None",
+   "difficulty": "medium"
+  }
+ },
+ {
+  "model": "knowledge.repaircost",
+  "pk": 303017,
+  "fields": {
+   "status": "draft",
+   "is_dummy": true,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300117,
+   "city": "Lahore",
+   "parts_min": 3000,
+   "parts_max": 12000,
+   "labour_min": 1500,
+   "labour_max": 3500,
+   "last_verified": "2026-10-30",
+   "source": "PLACEHOLDER - replace with a verified quote"
+  }
+ },
+ {
+  "model": "knowledge.cause",
+  "pk": 300118,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "name": "Blocked cabin filter or weak blower",
+   "system": "ac",
+   "description": "Airflow is restricted so cooling feels weak.",
+   "proof_hint": "Ask the mechanic to show the test or measurement that confirms: blocked cabin filter or weak blower.",
+   "prior": "0.200",
+   "severity": "low",
+   "safe_to_drive": true,
+   "car_models": []
+  }
+ },
+ {
+  "model": "knowledge.selfcheck",
+  "pk": 304018,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300118,
+   "steps": "Inspect the cabin filter behind the glovebox. A dirty filter is cheap to replace.",
+   "tools_needed": "Screwdriver",
+   "difficulty": "easy"
+  }
+ },
+ {
+  "model": "knowledge.repaircost",
+  "pk": 303018,
+  "fields": {
+   "status": "draft",
+   "is_dummy": true,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300118,
+   "city": "Lahore",
+   "parts_min": 500,
+   "parts_max": 4000,
+   "labour_min": 0,
+   "labour_max": 1000,
+   "last_verified": "2026-10-30",
+   "source": "PLACEHOLDER - replace with a verified quote"
+  }
+ },
+ {
+  "model": "knowledge.cause",
+  "pk": 300119,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "name": "Blown AC fuse or relay",
+   "system": "electrical",
+   "description": "The compressor clutch gets no power.",
+   "proof_hint": "Ask the mechanic to show the test or measurement that confirms: blown ac fuse or relay.",
+   "prior": "0.100",
+   "severity": "low",
+   "safe_to_drive": true,
+   "car_models": []
+  }
+ },
+ {
+  "model": "knowledge.selfcheck",
+  "pk": 304019,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300119,
+   "steps": "Check the AC fuse and relay in the fuse box using the manual.",
+   "tools_needed": "Spare fuse",
+   "difficulty": "easy"
+  }
+ },
+ {
+  "model": "knowledge.repaircost",
+  "pk": 303019,
+  "fields": {
+   "status": "draft",
+   "is_dummy": true,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300119,
+   "city": "Lahore",
+   "parts_min": 100,
+   "parts_max": 1500,
+   "labour_min": 0,
+   "labour_max": 1000,
+   "last_verified": "2026-10-30",
+   "source": "PLACEHOLDER - replace with a verified quote"
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301057,
+  "fields": {
+   "cause": 300115,
+   "symptom": 100036,
+   "strength": "always",
+   "weight": "0.90",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301058,
+  "fields": {
+   "cause": 300115,
+   "symptom": 300034,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301059,
+  "fields": {
+   "cause": 300115,
+   "symptom": 300033,
+   "strength": "sometimes",
+   "weight": "0.40",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301060,
+  "fields": {
+   "cause": 300115,
+   "symptom": 300031,
+   "strength": "sometimes",
+   "weight": "0.40",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301061,
+  "fields": {
+   "cause": 300116,
+   "symptom": 100036,
+   "strength": "always",
+   "weight": "0.90",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301062,
+  "fields": {
+   "cause": 300116,
+   "symptom": 300031,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301063,
+  "fields": {
+   "cause": 300116,
+   "symptom": 300034,
+   "strength": "rarely",
+   "weight": "0.10",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301064,
+  "fields": {
+   "cause": 300117,
+   "symptom": 100036,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301065,
+  "fields": {
+   "cause": 300117,
+   "symptom": 300033,
+   "strength": "always",
+   "weight": "0.90",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301066,
+  "fields": {
+   "cause": 300118,
+   "symptom": 300032,
+   "strength": "always",
+   "weight": "0.90",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301067,
+  "fields": {
+   "cause": 300118,
+   "symptom": 100036,
+   "strength": "sometimes",
+   "weight": "0.40",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301068,
+  "fields": {
+   "cause": 300119,
+   "symptom": 300031,
+   "strength": "always",
+   "weight": "0.90",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301069,
+  "fields": {
+   "cause": 300119,
+   "symptom": 100036,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300223,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 100036,
+   "text_en": "How is the air from the vents?",
+   "text_roman": "Vents se hawa kaisi aati hai?",
+   "text_ur": "",
+   "type": "single_choice",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": true,
+   "triage_order": 1,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302071,
+  "fields": {
+   "question": 300223,
+   "label": "Warm, not cold at all",
+   "label_roman": "Garam, bilkul thandi nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": 100036,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302072,
+  "fields": {
+   "question": 300223,
+   "label": "Cold only while driving, warm when stopped",
+   "label_roman": "Chalte hue thandi, ruke hue garam",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": 300033,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302073,
+  "fields": {
+   "question": 300223,
+   "label": "Cool but the airflow is weak",
+   "label_roman": "Thandi lekin hawa kamzor",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": 300032,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302074,
+  "fields": {
+   "question": 300223,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300224,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 300031,
+   "text_en": "With the engine running and the AC on, can you not hear a click as the compressor engages?",
+   "text_roman": "Engine chalu aur AC on karne par kya compressor lagne ki click nahi aati?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302075,
+  "fields": {
+   "question": 300224,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302076,
+  "fields": {
+   "question": 300224,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302077,
+  "fields": {
+   "question": 300224,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300225,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 300034,
+   "text_en": "Do you hear hissing or see oily residue near the AC pipes?",
+   "text_roman": "Kya AC ke pipes ke qareeb hissing ya tel jaisa nishan hai?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302078,
+  "fields": {
+   "question": 300225,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302079,
+  "fields": {
+   "question": 300225,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302080,
+  "fields": {
+   "question": 300225,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300226,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 300033,
+   "text_en": "Is the AC cold while driving but warm when you stop?",
+   "text_roman": "Kya AC chalte hue thanda lekin ruke hue garam hota hai?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302081,
+  "fields": {
+   "question": 300226,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302082,
+  "fields": {
+   "question": 300226,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302083,
+  "fields": {
+   "question": 300226,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300227,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 300032,
+   "text_en": "Is the airflow weak even with the fan at full speed?",
+   "text_roman": "Kya poori fan speed par bhi hawa kamzor hai?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302084,
+  "fields": {
+   "question": 300227,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302085,
+  "fields": {
+   "question": 300227,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302086,
+  "fields": {
+   "question": 300227,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.symptom",
+  "pk": 300041,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "key": "needs-jump-start",
+   "category": 9010,
+   "text_en": "Car needs a jump-start after sitting for a day or two",
+   "text_roman": "Aik do din khari rehne ke baad gaari ko dhakka ya jump start chahiye",
+   "text_ur": "",
+   "is_safety_critical": false,
+   "is_observable": true,
+   "is_generic": false
+  }
+ },
+ {
+  "model": "knowledge.symptom",
+  "pk": 300042,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "key": "battery-older-than-three-years",
+   "category": 9010,
+   "text_en": "Battery is more than three to four years old",
+   "text_roman": "Battery teen se chaar saal se purani hai",
+   "text_ur": "",
+   "is_safety_critical": false,
+   "is_observable": true,
+   "is_generic": false
+  }
+ },
+ {
+  "model": "knowledge.symptom",
+  "pk": 300043,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "key": "headlights-dim-battery-light",
+   "category": 9010,
+   "text_en": "Headlights dim at idle or the battery light comes on while driving",
+   "text_roman": "Idle par headlights dheemi ya chalte hue battery light jal jati hai",
+   "text_ur": "",
+   "is_safety_critical": false,
+   "is_observable": true,
+   "is_generic": false
+  }
+ },
+ {
+  "model": "knowledge.symptom",
+  "pk": 300044,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "key": "something-left-on",
+   "category": 9010,
+   "text_en": "Something stays on after the car is locked",
+   "text_roman": "Gaari lock karne ke baad bhi koi cheez on rehti hai",
+   "text_ur": "",
+   "is_safety_critical": false,
+   "is_observable": true,
+   "is_generic": false
+  }
+ },
+ {
+  "model": "knowledge.symptom",
+  "pk": 300045,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "key": "terminals-loose-or-corroded",
+   "category": 9010,
+   "text_en": "Battery terminals are loose or covered in crust",
+   "text_roman": "Battery ke terminals dheelay ya zang se dhake hue hain",
+   "text_ur": "",
+   "is_safety_critical": false,
+   "is_observable": true,
+   "is_generic": false
+  }
+ },
+ {
+  "model": "knowledge.cause",
+  "pk": 300120,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "name": "Old or worn-out battery",
+   "system": "electrical",
+   "description": "The battery can no longer hold a full charge.",
+   "proof_hint": "Ask the mechanic to show the test or measurement that confirms: old or worn-out battery.",
+   "prior": "0.400",
+   "severity": "low",
+   "safe_to_drive": true,
+   "car_models": []
+  }
+ },
+ {
+  "model": "knowledge.selfcheck",
+  "pk": 304020,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300120,
+   "steps": "Have the battery load-tested at a shop (often free). Age over 3 to 4 years makes this likely.",
+   "tools_needed": "None",
+   "difficulty": "easy"
+  }
+ },
+ {
+  "model": "knowledge.repaircost",
+  "pk": 303020,
+  "fields": {
+   "status": "draft",
+   "is_dummy": true,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300120,
+   "city": "Lahore",
+   "parts_min": 12000,
+   "parts_max": 30000,
+   "labour_min": 0,
+   "labour_max": 1000,
+   "last_verified": "2026-10-30",
+   "source": "PLACEHOLDER - replace with a verified quote"
+  }
+ },
+ {
+  "model": "knowledge.cause",
+  "pk": 300121,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "name": "Faulty alternator",
+   "system": "electrical",
+   "description": "The battery is not recharged while driving.",
+   "proof_hint": "Ask the mechanic to show the test or measurement that confirms: faulty alternator.",
+   "prior": "0.200",
+   "severity": "medium",
+   "safe_to_drive": true,
+   "car_models": []
+  }
+ },
+ {
+  "model": "knowledge.selfcheck",
+  "pk": 304021,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300121,
+   "steps": "With the engine running, a healthy alternator shows about 13.8 to 14.4 V across the battery.",
+   "tools_needed": "Multimeter",
+   "difficulty": "medium"
+  }
+ },
+ {
+  "model": "knowledge.repaircost",
+  "pk": 303021,
+  "fields": {
+   "status": "draft",
+   "is_dummy": true,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300121,
+   "city": "Lahore",
+   "parts_min": 10000,
+   "parts_max": 40000,
+   "labour_min": 2000,
+   "labour_max": 6000,
+   "last_verified": "2026-10-30",
+   "source": "PLACEHOLDER - replace with a verified quote"
+  }
+ },
+ {
+  "model": "knowledge.cause",
+  "pk": 300122,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "name": "Parasitic drain from a device left on",
+   "system": "electrical",
+   "description": "Something keeps drawing current after the car is off.",
+   "proof_hint": "Ask the mechanic to show the test or measurement that confirms: parasitic drain from a device left on.",
+   "prior": "0.200",
+   "severity": "low",
+   "safe_to_drive": true,
+   "car_models": []
+  }
+ },
+ {
+  "model": "knowledge.selfcheck",
+  "pk": 304022,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300122,
+   "steps": "Check boot, glovebox and interior lights, and unplug dashcams or chargers overnight.",
+   "tools_needed": "None",
+   "difficulty": "medium"
+  }
+ },
+ {
+  "model": "knowledge.repaircost",
+  "pk": 303022,
+  "fields": {
+   "status": "draft",
+   "is_dummy": true,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300122,
+   "city": "Lahore",
+   "parts_min": 0,
+   "parts_max": 3000,
+   "labour_min": 1500,
+   "labour_max": 5000,
+   "last_verified": "2026-10-30",
+   "source": "PLACEHOLDER - replace with a verified quote"
+  }
+ },
+ {
+  "model": "knowledge.cause",
+  "pk": 300123,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "name": "Loose or corroded battery terminals",
+   "system": "electrical",
+   "description": "Poor contact stops proper charging and starting.",
+   "proof_hint": "Ask the mechanic to show the test or measurement that confirms: loose or corroded battery terminals.",
+   "prior": "0.100",
+   "severity": "low",
+   "safe_to_drive": true,
+   "car_models": []
+  }
+ },
+ {
+  "model": "knowledge.selfcheck",
+  "pk": 304023,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300123,
+   "steps": "Check both terminals are tight and clean.",
+   "tools_needed": "Spanner, wire brush",
+   "difficulty": "easy"
+  }
+ },
+ {
+  "model": "knowledge.repaircost",
+  "pk": 303023,
+  "fields": {
+   "status": "draft",
+   "is_dummy": true,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "cause": 300123,
+   "city": "Lahore",
+   "parts_min": 0,
+   "parts_max": 500,
+   "labour_min": 500,
+   "labour_max": 1500,
+   "last_verified": "2026-10-30",
+   "source": "PLACEHOLDER - replace with a verified quote"
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301070,
+  "fields": {
+   "cause": 300120,
+   "symptom": 100120,
+   "strength": "always",
+   "weight": "0.90",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301071,
+  "fields": {
+   "cause": 300120,
+   "symptom": 100125,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301072,
+  "fields": {
+   "cause": 300120,
+   "symptom": 300041,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301073,
+  "fields": {
+   "cause": 300120,
+   "symptom": 300042,
+   "strength": "always",
+   "weight": "0.90",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301074,
+  "fields": {
+   "cause": 300121,
+   "symptom": 100120,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301075,
+  "fields": {
+   "cause": 300121,
+   "symptom": 300043,
+   "strength": "always",
+   "weight": "0.90",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301076,
+  "fields": {
+   "cause": 300121,
+   "symptom": 300041,
+   "strength": "sometimes",
+   "weight": "0.40",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301077,
+  "fields": {
+   "cause": 300122,
+   "symptom": 100125,
+   "strength": "always",
+   "weight": "0.90",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301078,
+  "fields": {
+   "cause": 300122,
+   "symptom": 300044,
+   "strength": "always",
+   "weight": "0.90",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301079,
+  "fields": {
+   "cause": 300122,
+   "symptom": 300041,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301080,
+  "fields": {
+   "cause": 300122,
+   "symptom": 100120,
+   "strength": "often",
+   "weight": "0.70",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301081,
+  "fields": {
+   "cause": 300123,
+   "symptom": 300045,
+   "strength": "always",
+   "weight": "0.90",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301082,
+  "fields": {
+   "cause": 300123,
+   "symptom": 100120,
+   "strength": "sometimes",
+   "weight": "0.40",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.causesymptomlink",
+  "pk": 301083,
+  "fields": {
+   "cause": 300123,
+   "symptom": 300041,
+   "strength": "sometimes",
+   "weight": "0.40",
+   "car_model": null
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300228,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 100120,
+   "text_en": "How does the battery problem show up?",
+   "text_roman": "Battery ka masla kaise samne aata hai?",
+   "text_ur": "",
+   "type": "single_choice",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": true,
+   "triage_order": 1,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302087,
+  "fields": {
+   "question": 300228,
+   "label": "Dead after sitting overnight or a day",
+   "label_roman": "Raat ya din bhar khari rehne ke baad dead",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": 100125,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302088,
+  "fields": {
+   "question": 300228,
+   "label": "Dies or lights dim while driving",
+   "label_roman": "Chalte hue band ya lights dheemi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": 300043,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302089,
+  "fields": {
+   "question": 300228,
+   "label": "Slow cranking, needs a jump-start",
+   "label_roman": "Start dheemay hota hai, jump start chahiye",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": 300041,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302090,
+  "fields": {
+   "question": 300228,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300229,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 300041,
+   "text_en": "Does the car need a jump-start after sitting for a day or two?",
+   "text_roman": "Kya aik do din khari rehne ke baad gaari ko jump start chahiye?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302091,
+  "fields": {
+   "question": 300229,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302092,
+  "fields": {
+   "question": 300229,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302093,
+  "fields": {
+   "question": 300229,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300230,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 300042,
+   "text_en": "Is the battery more than three to four years old?",
+   "text_roman": "Kya battery teen se chaar saal se purani hai?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302094,
+  "fields": {
+   "question": 300230,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302095,
+  "fields": {
+   "question": 300230,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302096,
+  "fields": {
+   "question": 300230,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300231,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 300043,
+   "text_en": "Do the headlights dim at idle, or does the battery light come on while driving?",
+   "text_roman": "Kya idle par headlights dheemi hoti hain ya chalte hue battery light jalti hai?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302097,
+  "fields": {
+   "question": 300231,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302098,
+  "fields": {
+   "question": 300231,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302099,
+  "fields": {
+   "question": 300231,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300232,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 300044,
+   "text_en": "Could something be left on after you lock the car (interior light, dashcam, stereo)?",
+   "text_roman": "Kya gaari lock karne ke baad koi cheez on reh sakti hai (light, dashcam, stereo)?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302100,
+  "fields": {
+   "question": 300232,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302101,
+  "fields": {
+   "question": 300232,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302102,
+  "fields": {
+   "question": 300232,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.question",
+  "pk": 300233,
+  "fields": {
+   "status": "published",
+   "is_dummy": false,
+   "version": 1,
+   "created_by": 6,
+   "approved_by": 6,
+   "created_at": "2026-10-30T12:00:00Z",
+   "updated_at": "2026-10-30T12:00:00Z",
+   "symptom": 300045,
+   "text_en": "Do the battery terminals look loose or covered in white or green crust?",
+   "text_roman": "Kya battery ke terminals dheelay ya safaid/hare zang se dhake hain?",
+   "text_ur": "",
+   "type": "yes_no",
+   "media_url": "",
+   "is_context": false,
+   "is_triage": false,
+   "triage_order": 0,
+   "requires_symptom": null
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302103,
+  "fields": {
+   "question": 300233,
+   "label": "Yes",
+   "label_roman": "Haan",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "confirms",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302104,
+  "fields": {
+   "question": 300233,
+   "label": "No",
+   "label_roman": "Nahi",
+   "label_ur": "",
+   "is_unsure": false,
+   "implies_symptom": null,
+   "effect": "denies",
+   "context_key": "",
+   "context_value": ""
+  }
+ },
+ {
+  "model": "knowledge.answeroption",
+  "pk": 302105,
+  "fields": {
+   "question": 300233,
+   "label": "Not sure",
+   "label_roman": "Pata nahi",
+   "label_ur": "",
+   "is_unsure": true,
+   "implies_symptom": null,
+   "effect": "unsure",
+   "context_key": "",
+   "context_value": ""
+  }
+ }
+]

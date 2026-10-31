@@ -1,0 +1,90 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: gaaridoc
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d gaaridoc"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    defaults:
+      run:
+        working-directory: backend
+    env:
+      DB_NAME: gaaridoc
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_HOST: 127.0.0.1
+      DB_PORT: "5432"
+      SECRET_KEY: ci-only-secret-key-not-used-outside-tests-381fa9a4d17a
+      DEBUG: "False"
+      ALLOW_DRAFT_CONTENT: "False"
+      ALLOWED_HOSTS: localhost,127.0.0.1
+      ADMIN_URL: ci-${{ github.run_id }}-${{ github.run_attempt }}
+      SECURE_SSL_REDIRECT: "True"
+      SESSION_COOKIE_SECURE: "True"
+      CSRF_COOKIE_SECURE: "True"
+      SECURE_HSTS_SECONDS: "31536000"
+      SECURE_HSTS_INCLUDE_SUBDOMAINS: "True"
+      SECURE_HSTS_PRELOAD: "True"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+          cache-dependency-path: backend/requirements.txt
+      - name: Install backend dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Check migrations
+        run: python manage.py makemigrations --check --dry-run
+      - name: Django deployment checks (warnings fail)
+        run: python manage.py check --deploy --fail-level WARNING
+      - name: Backend tests and module coverage
+        run: >-
+          pytest --cov=diagnosis.engine --cov=scamshield.logic --cov=scamshield.views
+          --cov=knowledge.services.workflow --cov-report=term-missing
+      - name: Enforce 80 percent per critical module
+        shell: bash
+        run: |
+          python -m coverage report --include="diagnosis/engine.py" --fail-under=80
+          python -m coverage report --include="scamshield/logic.py" --fail-under=80
+          python -m coverage report --include="scamshield/views.py" --fail-under=80
+          python -m coverage report --include="knowledge/services/workflow.py" --fail-under=80
+
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Install frontend dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Frontend tests
+        # flow.test.jsx is the end-to-end journey suite and requires a live backend;
+        # component tests run here without relying on an external API server.
+        run: npm test -- --run --exclude tests/flow.test.jsx
+      - name: Production build
+        run: npm run build

@@ -1,0 +1,10 @@
+{
+  "ask_mechanic": {
+    "en": "A {cause} is one possibility based on these symptoms. What test can confirm it? Please show me the result before replacing any parts.",
+    "roman_ur": "In alamat ki bunyaad par {cause} mumkin wajah hai. Is ki tasdeeq ke liye konsa test ho sakta hai? Parts badalne se pehle test ka result dikha dein."
+  },
+  "disclaimer": {
+    "en": "This is guidance, not a confirmed diagnosis. A qualified mechanic should inspect the vehicle; ask for proof before approving repairs.",
+    "roman_ur": "Yeh rehnumai hai, tasdeeq shuda tashkhees nahi. Gaari mechanic se check karwayein aur repair ki ijazat se pehle saboot maangein."
+  }
+}

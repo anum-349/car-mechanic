@@ -1,0 +1,11 @@
+title = "GaariDoc secret scanning"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Documented placeholders and synthetic test credentials"
+regexes = [
+  '''replace-with-[A-Za-z0-9_-]+''',
+  '''CI-only-secret-key-not-for-use-outside-tests-[A-Za-z0-9_-]+''',
+]

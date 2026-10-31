@@ -1,0 +1,1112 @@
+[
+ {
+  "model": "scamshield.scamcheck",
+  "pk": 400001,
+  "fields": {
+   "user": 6,
+   "session": null,
+   "claimed_cause": 300101,
+   "claim_text": "Battery is finished, needs a new one",
+   "quoted_price": 22000,
+   "plausibility": "0.85",
+   "verdict": "plausible",
+   "city": "Lahore",
+   "price_basis": "city",
+   "cost": {
+    "city": "Lahore",
+    "min": 12000,
+    "max": 31000,
+    "currency": "PKR"
+   },
+   "reasons": [
+    "The named cause is the top likely cause from your symptoms.",
+    "The quote is inside the usual range (PKR 12,000 to 31,000)."
+   ],
+   "proof_suggestions": [
+    "Ask to see the old part.",
+    "Ask for the test result or measurement that confirms the fault.",
+    "Ask for an itemised quote (parts and labour)."
+   ],
+   "candidate_causes": [
+    {
+     "cause": 300101,
+     "name": "Weak or dead battery",
+     "rank": 1
+    },
+    {
+     "cause": 300103,
+     "name": "Faulty starter motor or solenoid",
+     "rank": 2
+    },
+    {
+     "cause": 300102,
+     "name": "Loose or corroded battery terminals",
+     "rank": 3
+    },
+    {
+     "cause": 300104,
+     "name": "Failed fuel pump or fuel pump relay",
+     "rank": 4
+    },
+    {
+     "cause": 300105,
+     "name": "Immobiliser or key fault",
+     "rank": 5
+    }
+   ],
+   "limited": false,
+   "created_at": "2026-10-30T12:00:00Z"
+  }
+ },
+ {
+  "model": "scamshield.scamcheck",
+  "pk": 400002,
+  "fields": {
+   "user": 6,
+   "session": null,
+   "claimed_cause": 300104,
+   "claim_text": "Fuel pump has failed",
+   "quoted_price": 25000,
+   "plausibility": "0.50",
+   "verdict": "doubtful",
+   "city": "Lahore",
+   "price_basis": "city",
+   "cost": {
+    "city": "Lahore",
+    "min": 10000,
+    "max": 46000,
+    "currency": "PKR"
+   },
+   "reasons": [
+    "Your symptoms rank Weak or dead battery higher than Failed fuel pump or fuel pump relay.",
+    "The quote is inside the usual range (PKR 10,000 to 46,000)."
+   ],
+   "proof_suggestions": [
+    "Ask to see the old part.",
+    "Ask for the test result or measurement that confirms the fault.",
+    "Ask for an itemised quote (parts and labour)."
+   ],
+   "candidate_causes": [
+    {
+     "cause": 300101,
+     "name": "Weak or dead battery",
+     "rank": 1
+    },
+    {
+     "cause": 300103,
+     "name": "Faulty starter motor or solenoid",
+     "rank": 2
+    },
+    {
+     "cause": 300102,
+     "name": "Loose or corroded battery terminals",
+     "rank": 3
+    },
+    {
+     "cause": 300104,
+     "name": "Failed fuel pump or fuel pump relay",
+     "rank": 4
+    },
+    {
+     "cause": 300105,
+     "name": "Immobiliser or key fault",
+     "rank": 5
+    }
+   ],
+   "limited": false,
+   "created_at": "2026-10-30T12:00:00Z"
+  }
+ },
+ {
+  "model": "scamshield.scamcheck",
+  "pk": 400003,
+  "fields": {
+   "user": 6,
+   "session": null,
+   "claimed_cause": 300104,
+   "claim_text": "Fuel pump and wiring both gone",
+   "quoted_price": 120000,
+   "plausibility": "0.15",
+   "verdict": "suspicious",
+   "city": "Lahore",
+   "price_basis": "city",
+   "cost": {
+    "city": "Lahore",
+    "min": 10000,
+    "max": 46000,
+    "currency": "PKR"
+   },
+   "reasons": [
+    "Your symptoms rank Weak or dead battery higher than Failed fuel pump or fuel pump relay.",
+    "The quote is 2.6x the top of the usual range (PKR 10,000 to 46,000)."
+   ],
+   "proof_suggestions": [
+    "Ask to see the old part.",
+    "Ask for the test result or measurement that confirms the fault.",
+    "Ask for an itemised quote (parts and labour)."
+   ],
+   "candidate_causes": [
+    {
+     "cause": 300101,
+     "name": "Weak or dead battery",
+     "rank": 1
+    },
+    {
+     "cause": 300103,
+     "name": "Faulty starter motor or solenoid",
+     "rank": 2
+    },
+    {
+     "cause": 300102,
+     "name": "Loose or corroded battery terminals",
+     "rank": 3
+    },
+    {
+     "cause": 300104,
+     "name": "Failed fuel pump or fuel pump relay",
+     "rank": 4
+    },
+    {
+     "cause": 300105,
+     "name": "Immobiliser or key fault",
+     "rank": 5
+    }
+   ],
+   "limited": false,
+   "created_at": "2026-10-30T12:00:00Z"
+  }
+ },
+ {
+  "model": "scamshield.scamcheck",
+  "pk": 400004,
+  "fields": {
+   "user": 6,
+   "session": null,
+   "claimed_cause": null,
+   "claim_text": "Mechanic said the electrical system is damaged",
+   "quoted_price": 35000,
+   "plausibility": "0.50",
+   "verdict": "doubtful",
+   "city": "Lahore",
+   "price_basis": "unavailable",
+   "cost": {},
+   "reasons": [
+    "No cause was selected, so the quote cannot be compared with a specific repair."
+   ],
+   "proof_suggestions": [
+    "Ask to see the old part.",
+    "Ask for the test result or measurement that confirms the fault.",
+    "Ask for an itemised quote (parts and labour)."
+   ],
+   "candidate_causes": [
+    {
+     "cause": 300101,
+     "name": "Weak or dead battery",
+     "rank": 1
+    },
+    {
+     "cause": 300103,
+     "name": "Faulty starter motor or solenoid",
+     "rank": 2
+    },
+    {
+     "cause": 300102,
+     "name": "Loose or corroded battery terminals",
+     "rank": 3
+    },
+    {
+     "cause": 300104,
+     "name": "Failed fuel pump or fuel pump relay",
+     "rank": 4
+    },
+    {
+     "cause": 300105,
+     "name": "Immobiliser or key fault",
+     "rank": 5
+    }
+   ],
+   "limited": true,
+   "created_at": "2026-10-30T12:00:00Z"
+  }
+ },
+ {
+  "model": "scamshield.scamcheck",
+  "pk": 400005,
+  "fields": {
+   "user": 6,
+   "session": null,
+   "claimed_cause": 300108,
+   "claim_text": "Radiator fan relay is dead",
+   "quoted_price": 9000,
+   "plausibility": "0.85",
+   "verdict": "plausible",
+   "city": "Lahore",
+   "price_basis": "city",
+   "cost": {
+    "city": "Lahore",
+    "min": 4500,
+    "max": 19000,
+    "currency": "PKR"
+   },
+   "reasons": [
+    "The named cause is the top likely cause from your symptoms.",
+    "The quote is inside the usual range (PKR 4,500 to 19,000)."
+   ],
+   "proof_suggestions": [
+    "Ask to see the old part.",
+    "Ask for the test result or measurement that confirms the fault.",
+    "Ask for an itemised quote (parts and labour)."
+   ],
+   "candidate_causes": [
+    {
+     "cause": 300108,
+     "name": "Radiator fan or fan relay failure",
+     "rank": 1
+    },
+    {
+     "cause": 300106,
+     "name": "Low coolant or a coolant leak",
+     "rank": 2
+    },
+    {
+     "cause": 300107,
+     "name": "Stuck thermostat",
+     "rank": 3
+    },
+    {
+     "cause": 300109,
+     "name": "Failing water pump",
+     "rank": 4
+    },
+    {
+     "cause": 300110,
+     "name": "Head gasket leak",
+     "rank": 5
+    }
+   ],
+   "limited": false,
+   "created_at": "2026-10-30T12:00:00Z"
+  }
+ },
+ {
+  "model": "scamshield.scamcheck",
+  "pk": 400006,
+  "fields": {
+   "user": 6,
+   "session": null,
+   "claimed_cause": 300110,
+   "claim_text": "Head gasket has blown",
+   "quoted_price": 60000,
+   "plausibility": "0.50",
+   "verdict": "doubtful",
+   "city": "Lahore",
+   "price_basis": "city",
+   "cost": {
+    "city": "Lahore",
+    "min": 33000,
+    "max": 90000,
+    "currency": "PKR"
+   },
+   "reasons": [
+    "Your symptoms rank Radiator fan or fan relay failure higher than Head gasket leak.",
+    "The quote is inside the usual range (PKR 33,000 to 90,000)."
+   ],
+   "proof_suggestions": [
+    "Ask to see the old part.",
+    "Ask for the test result or measurement that confirms the fault.",
+    "Ask for an itemised quote (parts and labour)."
+   ],
+   "candidate_causes": [
+    {
+     "cause": 300108,
+     "name": "Radiator fan or fan relay failure",
+     "rank": 1
+    },
+    {
+     "cause": 300106,
+     "name": "Low coolant or a coolant leak",
+     "rank": 2
+    },
+    {
+     "cause": 300107,
+     "name": "Stuck thermostat",
+     "rank": 3
+    },
+    {
+     "cause": 300109,
+     "name": "Failing water pump",
+     "rank": 4
+    },
+    {
+     "cause": 300110,
+     "name": "Head gasket leak",
+     "rank": 5
+    }
+   ],
+   "limited": false,
+   "created_at": "2026-10-30T12:00:00Z"
+  }
+ },
+ {
+  "model": "scamshield.scamcheck",
+  "pk": 400007,
+  "fields": {
+   "user": 6,
+   "session": null,
+   "claimed_cause": 300109,
+   "claim_text": "Water pump and radiator both need replacing",
+   "quoted_price": 80000,
+   "plausibility": "0.15",
+   "verdict": "suspicious",
+   "city": "Lahore",
+   "price_basis": "city",
+   "cost": {
+    "city": "Lahore",
+    "min": 9000,
+    "max": 29000,
+    "currency": "PKR"
+   },
+   "reasons": [
+    "Your symptoms rank Radiator fan or fan relay failure higher than Failing water pump.",
+    "The quote is 2.8x the top of the usual range (PKR 9,000 to 29,000)."
+   ],
+   "proof_suggestions": [
+    "Ask to see the old part.",
+    "Ask for the test result or measurement that confirms the fault.",
+    "Ask for an itemised quote (parts and labour)."
+   ],
+   "candidate_causes": [
+    {
+     "cause": 300108,
+     "name": "Radiator fan or fan relay failure",
+     "rank": 1
+    },
+    {
+     "cause": 300106,
+     "name": "Low coolant or a coolant leak",
+     "rank": 2
+    },
+    {
+     "cause": 300107,
+     "name": "Stuck thermostat",
+     "rank": 3
+    },
+    {
+     "cause": 300109,
+     "name": "Failing water pump",
+     "rank": 4
+    },
+    {
+     "cause": 300110,
+     "name": "Head gasket leak",
+     "rank": 5
+    }
+   ],
+   "limited": false,
+   "created_at": "2026-10-30T12:00:00Z"
+  }
+ },
+ {
+  "model": "scamshield.scamcheck",
+  "pk": 400008,
+  "fields": {
+   "user": 6,
+   "session": null,
+   "claimed_cause": null,
+   "claim_text": "Mechanic said the engine is cooking itself",
+   "quoted_price": 50000,
+   "plausibility": "0.50",
+   "verdict": "doubtful",
+   "city": "Lahore",
+   "price_basis": "unavailable",
+   "cost": {},
+   "reasons": [
+    "No cause was selected, so the quote cannot be compared with a specific repair."
+   ],
+   "proof_suggestions": [
+    "Ask to see the old part.",
+    "Ask for the test result or measurement that confirms the fault.",
+    "Ask for an itemised quote (parts and labour)."
+   ],
+   "candidate_causes": [
+    {
+     "cause": 300108,
+     "name": "Radiator fan or fan relay failure",
+     "rank": 1
+    },
+    {
+     "cause": 300106,
+     "name": "Low coolant or a coolant leak",
+     "rank": 2
+    },
+    {
+     "cause": 300107,
+     "name": "Stuck thermostat",
+     "rank": 3
+    },
+    {
+     "cause": 300109,
+     "name": "Failing water pump",
+     "rank": 4
+    },
+    {
+     "cause": 300110,
+     "name": "Head gasket leak",
+     "rank": 5
+    }
+   ],
+   "limited": true,
+   "created_at": "2026-10-30T12:00:00Z"
+  }
+ },
+ {
+  "model": "scamshield.scamcheck",
+  "pk": 400009,
+  "fields": {
+   "user": 6,
+   "session": null,
+   "claimed_cause": 300112,
+   "claim_text": "Front brake pads are worn",
+   "quoted_price": 7000,
+   "plausibility": "0.85",
+   "verdict": "plausible",
+   "city": "Lahore",
+   "price_basis": "city",
+   "cost": {
+    "city": "Lahore",
+    "min": 4000,
+    "max": 15000,
+    "currency": "PKR"
+   },
+   "reasons": [
+    "The named cause is the top likely cause from your symptoms.",
+    "The quote is inside the usual range (PKR 4,000 to 15,000)."
+   ],
+   "proof_suggestions": [
+    "Ask to see the old part.",
+    "Ask for the test result or measurement that confirms the fault.",
+    "Ask for an itemised quote (parts and labour)."
+   ],
+   "candidate_causes": [
+    {
+     "cause": 300112,
+     "name": "Worn brake pads",
+     "rank": 1
+    },
+    {
+     "cause": 300111,
+     "name": "Warped brake discs",
+     "rank": 2
+    },
+    {
+     "cause": 300113,
+     "name": "Seized brake caliper",
+     "rank": 3
+    },
+    {
+     "cause": 300114,
+     "name": "Brake fluid leak or air in the brake lines",
+     "rank": 4
+    }
+   ],
+   "limited": false,
+   "created_at": "2026-10-30T12:00:00Z"
+  }
+ },
+ {
+  "model": "scamshield.scamcheck",
+  "pk": 400010,
+  "fields": {
+   "user": 6,
+   "session": null,
+   "claimed_cause": 300111,
+   "claim_text": "Discs are warped and need replacing",
+   "quoted_price": 20000,
+   "plausibility": "0.50",
+   "verdict": "doubtful",
+   "city": "Lahore",
+   "price_basis": "city",
+   "cost": {
+    "city": "Lahore",
+    "min": 8000,
+    "max": 30000,
+    "currency": "PKR"
+   },
+   "reasons": [
+    "Your symptoms rank Worn brake pads higher than Warped brake discs.",
+    "The quote is inside the usual range (PKR 8,000 to 30,000)."
+   ],
+   "proof_suggestions": [
+    "Ask to see the old part.",
+    "Ask for the test result or measurement that confirms the fault.",
+    "Ask for an itemised quote (parts and labour)."
+   ],
+   "candidate_causes": [
+    {
+     "cause": 300112,
+     "name": "Worn brake pads",
+     "rank": 1
+    },
+    {
+     "cause": 300111,
+     "name": "Warped brake discs",
+     "rank": 2
+    },
+    {
+     "cause": 300113,
+     "name": "Seized brake caliper",
+     "rank": 3
+    },
+    {
+     "cause": 300114,
+     "name": "Brake fluid leak or air in the brake lines",
+     "rank": 4
+    }
+   ],
+   "limited": false,
+   "created_at": "2026-10-30T12:00:00Z"
+  }
+ },
+ {
+  "model": "scamshield.scamcheck",
+  "pk": 400011,
+  "fields": {
+   "user": 6,
+   "session": null,
+   "claimed_cause": 300113,
+   "claim_text": "Both calipers seized",
+   "quoted_price": 70000,
+   "plausibility": "0.15",
+   "verdict": "suspicious",
+   "city": "Lahore",
+   "price_basis": "city",
+   "cost": {
+    "city": "Lahore",
+    "min": 7000,
+    "max": 25000,
+    "currency": "PKR"
+   },
+   "reasons": [
+    "Your symptoms rank Worn brake pads higher than Seized brake caliper.",
+    "The quote is 2.8x the top of the usual range (PKR 7,000 to 25,000)."
+   ],
+   "proof_suggestions": [
+    "Ask to see the old part.",
+    "Ask for the test result or measurement that confirms the fault.",
+    "Ask for an itemised quote (parts and labour)."
+   ],
+   "candidate_causes": [
+    {
+     "cause": 300112,
+     "name": "Worn brake pads",
+     "rank": 1
+    },
+    {
+     "cause": 300111,
+     "name": "Warped brake discs",
+     "rank": 2
+    },
+    {
+     "cause": 300113,
+     "name": "Seized brake caliper",
+     "rank": 3
+    },
+    {
+     "cause": 300114,
+     "name": "Brake fluid leak or air in the brake lines",
+     "rank": 4
+    }
+   ],
+   "limited": false,
+   "created_at": "2026-10-30T12:00:00Z"
+  }
+ },
+ {
+  "model": "scamshield.scamcheck",
+  "pk": 400012,
+  "fields": {
+   "user": 6,
+   "session": null,
+   "claimed_cause": null,
+   "claim_text": "Mechanic said the whole brake system needs doing",
+   "quoted_price": 45000,
+   "plausibility": "0.50",
+   "verdict": "doubtful",
+   "city": "Lahore",
+   "price_basis": "unavailable",
+   "cost": {},
+   "reasons": [
+    "No cause was selected, so the quote cannot be compared with a specific repair."
+   ],
+   "proof_suggestions": [
+    "Ask to see the old part.",
+    "Ask for the test result or measurement that confirms the fault.",
+    "Ask for an itemised quote (parts and labour)."
+   ],
+   "candidate_causes": [
+    {
+     "cause": 300112,
+     "name": "Worn brake pads",
+     "rank": 1
+    },
+    {
+     "cause": 300111,
+     "name": "Warped brake discs",
+     "rank": 2
+    },
+    {
+     "cause": 300113,
+     "name": "Seized brake caliper",
+     "rank": 3
+    },
+    {
+     "cause": 300114,
+     "name": "Brake fluid leak or air in the brake lines",
+     "rank": 4
+    }
+   ],
+   "limited": true,
+   "created_at": "2026-10-30T12:00:00Z"
+  }
+ },
+ {
+  "model": "scamshield.scamcheck",
+  "pk": 400013,
+  "fields": {
+   "user": 6,
+   "session": null,
+   "claimed_cause": 300115,
+   "claim_text": "AC gas is low, needs refill and leak seal",
+   "quoted_price": 6000,
+   "plausibility": "0.85",
+   "verdict": "plausible",
+   "city": "Lahore",
+   "price_basis": "city",
+   "cost": {
+    "city": "Lahore",
+    "min": 3000,
+    "max": 11000,
+    "currency": "PKR"
+   },
+   "reasons": [
+    "The named cause is the top likely cause from your symptoms.",
+    "The quote is inside the usual range (PKR 3,000 to 11,000)."
+   ],
+   "proof_suggestions": [
+    "Ask to see the old part.",
+    "Ask for the test result or measurement that confirms the fault.",
+    "Ask for an itemised quote (parts and labour)."
+   ],
+   "candidate_causes": [
+    {
+     "cause": 300115,
+     "name": "Low refrigerant or a leak in the AC system",
+     "rank": 1
+    },
+    {
+     "cause": 300116,
+     "name": "Compressor or compressor clutch failure",
+     "rank": 2
+    },
+    {
+     "cause": 300117,
+     "name": "Condenser fan not working",
+     "rank": 3
+    },
+    {
+     "cause": 300118,
+     "name": "Blocked cabin filter or weak blower",
+     "rank": 4
+    },
+    {
+     "cause": 300119,
+     "name": "Blown AC fuse or relay",
+     "rank": 5
+    }
+   ],
+   "limited": false,
+   "created_at": "2026-10-30T12:00:00Z"
+  }
+ },
+ {
+  "model": "scamshield.scamcheck",
+  "pk": 400014,
+  "fields": {
+   "user": 6,
+   "session": null,
+   "claimed_cause": 300116,
+   "claim_text": "Compressor has failed",
+   "quoted_price": 30000,
+   "plausibility": "0.50",
+   "verdict": "doubtful",
+   "city": "Lahore",
+   "price_basis": "city",
+   "cost": {
+    "city": "Lahore",
+    "min": 19000,
+    "max": 59000,
+    "currency": "PKR"
+   },
+   "reasons": [
+    "Your symptoms rank Low refrigerant or a leak in the AC system higher than Compressor or compressor clutch failure.",
+    "The quote is inside the usual range (PKR 19,000 to 59,000)."
+   ],
+   "proof_suggestions": [
+    "Ask to see the old part.",
+    "Ask for the test result or measurement that confirms the fault.",
+    "Ask for an itemised quote (parts and labour)."
+   ],
+   "candidate_causes": [
+    {
+     "cause": 300115,
+     "name": "Low refrigerant or a leak in the AC system",
+     "rank": 1
+    },
+    {
+     "cause": 300116,
+     "name": "Compressor or compressor clutch failure",
+     "rank": 2
+    },
+    {
+     "cause": 300117,
+     "name": "Condenser fan not working",
+     "rank": 3
+    },
+    {
+     "cause": 300118,
+     "name": "Blocked cabin filter or weak blower",
+     "rank": 4
+    },
+    {
+     "cause": 300119,
+     "name": "Blown AC fuse or relay",
+     "rank": 5
+    }
+   ],
+   "limited": false,
+   "created_at": "2026-10-30T12:00:00Z"
+  }
+ },
+ {
+  "model": "scamshield.scamcheck",
+  "pk": 400015,
+  "fields": {
+   "user": 6,
+   "session": null,
+   "claimed_cause": 300116,
+   "claim_text": "Compressor and condenser both need replacing",
+   "quoted_price": 150000,
+   "plausibility": "0.15",
+   "verdict": "suspicious",
+   "city": "Lahore",
+   "price_basis": "city",
+   "cost": {
+    "city": "Lahore",
+    "min": 19000,
+    "max": 59000,
+    "currency": "PKR"
+   },
+   "reasons": [
+    "Your symptoms rank Low refrigerant or a leak in the AC system higher than Compressor or compressor clutch failure.",
+    "The quote is 2.5x the top of the usual range (PKR 19,000 to 59,000)."
+   ],
+   "proof_suggestions": [
+    "Ask to see the old part.",
+    "Ask for the test result or measurement that confirms the fault.",
+    "Ask for an itemised quote (parts and labour)."
+   ],
+   "candidate_causes": [
+    {
+     "cause": 300115,
+     "name": "Low refrigerant or a leak in the AC system",
+     "rank": 1
+    },
+    {
+     "cause": 300116,
+     "name": "Compressor or compressor clutch failure",
+     "rank": 2
+    },
+    {
+     "cause": 300117,
+     "name": "Condenser fan not working",
+     "rank": 3
+    },
+    {
+     "cause": 300118,
+     "name": "Blocked cabin filter or weak blower",
+     "rank": 4
+    },
+    {
+     "cause": 300119,
+     "name": "Blown AC fuse or relay",
+     "rank": 5
+    }
+   ],
+   "limited": false,
+   "created_at": "2026-10-30T12:00:00Z"
+  }
+ },
+ {
+  "model": "scamshield.scamcheck",
+  "pk": 400016,
+  "fields": {
+   "user": 6,
+   "session": null,
+   "claimed_cause": null,
+   "claim_text": "Mechanic said the AC system is gone",
+   "quoted_price": 40000,
+   "plausibility": "0.50",
+   "verdict": "doubtful",
+   "city": "Lahore",
+   "price_basis": "unavailable",
+   "cost": {},
+   "reasons": [
+    "No cause was selected, so the quote cannot be compared with a specific repair."
+   ],
+   "proof_suggestions": [
+    "Ask to see the old part.",
+    "Ask for the test result or measurement that confirms the fault.",
+    "Ask for an itemised quote (parts and labour)."
+   ],
+   "candidate_causes": [
+    {
+     "cause": 300115,
+     "name": "Low refrigerant or a leak in the AC system",
+     "rank": 1
+    },
+    {
+     "cause": 300116,
+     "name": "Compressor or compressor clutch failure",
+     "rank": 2
+    },
+    {
+     "cause": 300117,
+     "name": "Condenser fan not working",
+     "rank": 3
+    },
+    {
+     "cause": 300118,
+     "name": "Blocked cabin filter or weak blower",
+     "rank": 4
+    },
+    {
+     "cause": 300119,
+     "name": "Blown AC fuse or relay",
+     "rank": 5
+    }
+   ],
+   "limited": true,
+   "created_at": "2026-10-30T12:00:00Z"
+  }
+ },
+ {
+  "model": "scamshield.scamcheck",
+  "pk": 400017,
+  "fields": {
+   "user": 6,
+   "session": null,
+   "claimed_cause": 300122,
+   "claim_text": "Something is draining the battery overnight",
+   "quoted_price": 4000,
+   "plausibility": "0.85",
+   "verdict": "plausible",
+   "city": "Lahore",
+   "price_basis": "city",
+   "cost": {
+    "city": "Lahore",
+    "min": 1500,
+    "max": 8000,
+    "currency": "PKR"
+   },
+   "reasons": [
+    "The named cause is the top likely cause from your symptoms.",
+    "The quote is inside the usual range (PKR 1,500 to 8,000)."
+   ],
+   "proof_suggestions": [
+    "Ask to see the old part.",
+    "Ask for the test result or measurement that confirms the fault.",
+    "Ask for an itemised quote (parts and labour)."
+   ],
+   "candidate_causes": [
+    {
+     "cause": 300122,
+     "name": "Parasitic drain from a device left on",
+     "rank": 1
+    },
+    {
+     "cause": 300120,
+     "name": "Old or worn-out battery",
+     "rank": 2
+    },
+    {
+     "cause": 300121,
+     "name": "Faulty alternator",
+     "rank": 3
+    },
+    {
+     "cause": 300123,
+     "name": "Loose or corroded battery terminals",
+     "rank": 4
+    }
+   ],
+   "limited": false,
+   "created_at": "2026-10-30T12:00:00Z"
+  }
+ },
+ {
+  "model": "scamshield.scamcheck",
+  "pk": 400018,
+  "fields": {
+   "user": 6,
+   "session": null,
+   "claimed_cause": 300121,
+   "claim_text": "Alternator is faulty",
+   "quoted_price": 30000,
+   "plausibility": "0.50",
+   "verdict": "doubtful",
+   "city": "Lahore",
+   "price_basis": "city",
+   "cost": {
+    "city": "Lahore",
+    "min": 12000,
+    "max": 46000,
+    "currency": "PKR"
+   },
+   "reasons": [
+    "Your symptoms rank Parasitic drain from a device left on higher than Faulty alternator.",
+    "The quote is inside the usual range (PKR 12,000 to 46,000)."
+   ],
+   "proof_suggestions": [
+    "Ask to see the old part.",
+    "Ask for the test result or measurement that confirms the fault.",
+    "Ask for an itemised quote (parts and labour)."
+   ],
+   "candidate_causes": [
+    {
+     "cause": 300122,
+     "name": "Parasitic drain from a device left on",
+     "rank": 1
+    },
+    {
+     "cause": 300120,
+     "name": "Old or worn-out battery",
+     "rank": 2
+    },
+    {
+     "cause": 300121,
+     "name": "Faulty alternator",
+     "rank": 3
+    },
+    {
+     "cause": 300123,
+     "name": "Loose or corroded battery terminals",
+     "rank": 4
+    }
+   ],
+   "limited": false,
+   "created_at": "2026-10-30T12:00:00Z"
+  }
+ },
+ {
+  "model": "scamshield.scamcheck",
+  "pk": 400019,
+  "fields": {
+   "user": 6,
+   "session": null,
+   "claimed_cause": 300121,
+   "claim_text": "Alternator and battery both need replacing",
+   "quoted_price": 120000,
+   "plausibility": "0.15",
+   "verdict": "suspicious",
+   "city": "Lahore",
+   "price_basis": "city",
+   "cost": {
+    "city": "Lahore",
+    "min": 12000,
+    "max": 46000,
+    "currency": "PKR"
+   },
+   "reasons": [
+    "Your symptoms rank Parasitic drain from a device left on higher than Faulty alternator.",
+    "The quote is 2.6x the top of the usual range (PKR 12,000 to 46,000)."
+   ],
+   "proof_suggestions": [
+    "Ask to see the old part.",
+    "Ask for the test result or measurement that confirms the fault.",
+    "Ask for an itemised quote (parts and labour)."
+   ],
+   "candidate_causes": [
+    {
+     "cause": 300122,
+     "name": "Parasitic drain from a device left on",
+     "rank": 1
+    },
+    {
+     "cause": 300120,
+     "name": "Old or worn-out battery",
+     "rank": 2
+    },
+    {
+     "cause": 300121,
+     "name": "Faulty alternator",
+     "rank": 3
+    },
+    {
+     "cause": 300123,
+     "name": "Loose or corroded battery terminals",
+     "rank": 4
+    }
+   ],
+   "limited": false,
+   "created_at": "2026-10-30T12:00:00Z"
+  }
+ },
+ {
+  "model": "scamshield.scamcheck",
+  "pk": 400020,
+  "fields": {
+   "user": 6,
+   "session": null,
+   "claimed_cause": null,
+   "claim_text": "Mechanic said the wiring is bad",
+   "quoted_price": 30000,
+   "plausibility": "0.50",
+   "verdict": "doubtful",
+   "city": "Lahore",
+   "price_basis": "unavailable",
+   "cost": {},
+   "reasons": [
+    "No cause was selected, so the quote cannot be compared with a specific repair."
+   ],
+   "proof_suggestions": [
+    "Ask to see the old part.",
+    "Ask for the test result or measurement that confirms the fault.",
+    "Ask for an itemised quote (parts and labour)."
+   ],
+   "candidate_causes": [
+    {
+     "cause": 300122,
+     "name": "Parasitic drain from a device left on",
+     "rank": 1
+    },
+    {
+     "cause": 300120,
+     "name": "Old or worn-out battery",
+     "rank": 2
+    },
+    {
+     "cause": 300121,
+     "name": "Faulty alternator",
+     "rank": 3
+    },
+    {
+     "cause": 300123,
+     "name": "Loose or corroded battery terminals",
+     "rank": 4
+    }
+   ],
+   "limited": true,
+   "created_at": "2026-10-30T12:00:00Z"
+  }
+ }
+]

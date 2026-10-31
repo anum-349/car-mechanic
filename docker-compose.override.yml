@@ -1,0 +1,35 @@
+services:
+  db:
+    ports:
+      - "127.0.0.1:${DB_HOST_PORT:-5432}:5432"
+
+  api:
+    environment:
+      DEBUG: "True"
+      ALLOW_DRAFT_CONTENT: "True"
+      RUN_LAUNCH_CHECK: "0"
+      SECURE_SSL_REDIRECT: "False"
+      SESSION_COOKIE_SECURE: "False"
+      CSRF_COOKIE_SECURE: "False"
+      SECURE_HSTS_SECONDS: "0"
+      SECURE_HSTS_INCLUDE_SUBDOMAINS: "False"
+      SECURE_HSTS_PRELOAD: "False"
+      TRUST_PROXY_HEADERS: "False"
+      ALLOWED_HOSTS: ${ALLOWED_HOSTS:-localhost,127.0.0.1,api,web}
+      CSRF_TRUSTED_ORIGINS: ${CSRF_TRUSTED_ORIGINS:-http://localhost:8080}
+      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-http://localhost:8080}
+      ADMIN_URL: ${ADMIN_URL:-local-admin}
+
+  worker:
+    environment:
+      DEBUG: "True"
+      ALLOW_DRAFT_CONTENT: "True"
+
+  beat:
+    environment:
+      DEBUG: "True"
+      ALLOW_DRAFT_CONTENT: "True"
+
+  web:
+    ports:
+      - "127.0.0.1:${WEB_PORT:-8080}:8080"

@@ -1,0 +1,92 @@
+name: Deploy
+
+on:
+  workflow_run:
+    workflows: ["CI"]
+    types: [completed]
+    branches: [main]
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build-and-deploy:
+    if: >-
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.head_branch == 'main'
+    runs-on: ubuntu-latest
+    env:
+      REGISTRY: ${{ vars.CONTAINER_REGISTRY }}
+      IMAGE_NAMESPACE: ${{ vars.CONTAINER_REGISTRY }}/${{ github.repository }}
+      IMAGE_TAG: ${{ github.event.workflow_run.head_sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+      - name: Confirm registry configuration
+        run: test -n "$REGISTRY"
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/login-action@v3
+        with:
+          registry: ${{ vars.CONTAINER_REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and push API image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./backend
+          file: ./backend/Dockerfile
+          push: true
+          tags: |
+            ${{ env.IMAGE_NAMESPACE }}/api:${{ env.IMAGE_TAG }}
+            ${{ env.IMAGE_NAMESPACE }}/api:main
+      - name: Build and push web image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./frontend/Dockerfile
+          push: true
+          tags: |
+            ${{ env.IMAGE_NAMESPACE }}/web:${{ env.IMAGE_TAG }}
+            ${{ env.IMAGE_NAMESPACE }}/web:main
+      - name: Configure deployment SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+      - name: Deploy with blocking launch gate
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+          API_IMAGE: ${{ env.IMAGE_NAMESPACE }}/api:${{ env.IMAGE_TAG }}
+          WEB_IMAGE: ${{ env.IMAGE_NAMESPACE }}/web:${{ env.IMAGE_TAG }}
+        run: |
+          test -n "$DEPLOY_HOST"
+          test -n "$DEPLOY_USER"
+          test -n "$DEPLOY_PATH"
+          scp -i ~/.ssh/deploy_key docker-compose.yml .env.production.example \
+            "$DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH/"
+          ssh -i ~/.ssh/deploy_key "$DEPLOY_USER@$DEPLOY_HOST" sh -s -- \
+            "$DEPLOY_PATH" "$API_IMAGE" "$WEB_IMAGE" <<'REMOTE'
+          set -eu
+          deploy_path=$1
+          api_image=$2
+          web_image=$3
+          cd "$deploy_path"
+          export API_IMAGE="$api_image" WEB_IMAGE="$web_image"
+          compose="docker compose --env-file .env.production -f docker-compose.yml"
+          $compose pull api worker beat web
+          $compose up -d db redis static-init
+          $compose up -d --wait db redis
+          $compose run --rm --no-deps --entrypoint python api manage.py migrate --noinput
+          # This is a blocking pre-traffic gate. API startup repeats it by default.
+          $compose run --rm --no-deps --entrypoint python api manage.py launch_check --production
+          $compose up -d --remove-orphans --wait
+          REMOTE

@@ -1,0 +1,41 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`result components > renders the 360px share card structure 1`] = `
+<article
+  class="share-card"
+  data-testid="share-card"
+  style="width: 360px;"
+>
+  <p
+    class="share-brand"
+  >
+    Gari Check
+  </p>
+  <h2>
+    Car check
+  </h2>
+  <p>
+    Weak battery
+  </p>
+  <p
+    class="share-band"
+  >
+    Very likely
+  </p>
+  <p>
+    Total range
+    : 
+    PKR 9,000
+     – 
+    PKR 18,500
+  </p>
+  <p
+    class="share-referral"
+  >
+    Referral code: GC-0000
+  </p>
+  <small>
+    Guidance only · Have a mechanic inspect the car
+  </small>
+</article>
+`;

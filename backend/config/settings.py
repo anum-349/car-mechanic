@@ -13,25 +13,48 @@ https://docs.djangoproject.com/en/6.1/ref/settings/
 from datetime import timedelta
 import os
 from pathlib import Path
+from celery.schedules import crontab
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(BASE_DIR / ".env")
+
+
+def env_bool(name, default):
+    value = os.getenv(name)
+    if value is None:
+        return default
+    return value.strip().lower() in {"1", "true", "yes", "on"}
+
+
+def env_list(name, default=""):
+    return [item.strip() for item in os.getenv(name, default).split(",") if item.strip()]
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-j7dl1gdu$mg)+n(8w1j=)(o7(3=)sg#^ww)fie&(75zs$o+8!9'
+SECRET_KEY = os.getenv("SECRET_KEY", "")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env_bool("DEBUG", False)
 
-ALLOWED_HOSTS = []
+SECURE_SSL_REDIRECT = env_bool("SECURE_SSL_REDIRECT", not DEBUG)
+SESSION_COOKIE_SECURE = env_bool("SESSION_COOKIE_SECURE", not DEBUG)
+CSRF_COOKIE_SECURE = env_bool("CSRF_COOKIE_SECURE", not DEBUG)
+SECURE_HSTS_SECONDS = int(os.getenv("SECURE_HSTS_SECONDS", "0" if DEBUG else "31536000"))
+SECURE_HSTS_INCLUDE_SUBDOMAINS = env_bool("SECURE_HSTS_INCLUDE_SUBDOMAINS", not DEBUG)
+SECURE_HSTS_PRELOAD = env_bool("SECURE_HSTS_PRELOAD", not DEBUG)
+
+ALLOWED_HOSTS = env_list("ALLOWED_HOSTS", "localhost,127.0.0.1")
+CSRF_TRUSTED_ORIGINS = env_list("CSRF_TRUSTED_ORIGINS")
+if env_bool("TRUST_PROXY_HEADERS", False):
+    # Only enable behind a trusted proxy that overwrites X-Forwarded-Proto.
+    SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 AUTH_USER_MODEL = 'accounts.User'
 
@@ -45,15 +68,38 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework_simplejwt.token_blacklist',
     'corsheaders',
     'drf_spectacular',
     'diagnosis',
     'garage',
     'knowledge',
     'reviews',
-    'scamshields',
+    'scamshield',
     'accounts',
+    'analytics',
 ]
+
+CORS_ALLOWED_ORIGINS = env_list("CORS_ALLOWED_ORIGINS", "http://localhost:5173")
+ALLOW_DRAFT_CONTENT = DEBUG and env_bool("ALLOW_DRAFT_CONTENT", True)
+LAUNCH_MIN_FLOWS = int(os.getenv("LAUNCH_MIN_FLOWS", "3"))
+CELERY_BROKER_URL = os.getenv("CELERY_BROKER_URL", "memory://")
+CELERY_TASK_ALWAYS_EAGER = env_bool("CELERY_TASK_ALWAYS_EAGER", True)
+OUTCOME_REMINDER_EXTERNAL_ENABLED = env_bool("OUTCOME_REMINDER_EXTERNAL_ENABLED", False)
+ALLOW_SELF_APPROVAL = env_bool("ALLOW_SELF_APPROVAL", False)
+
+ENGINE_CONFIDENCE_THRESHOLD = float(os.getenv("ENGINE_CONFIDENCE_THRESHOLD", "0.70"))
+ENGINE_MIN_GAP = float(os.getenv("ENGINE_MIN_GAP", "0.20"))
+ENGINE_MAX_QUESTIONS = int(os.getenv("ENGINE_MAX_QUESTIONS", "8"))
+ENGINE_LEAK_LIKELIHOOD = float(os.getenv("ENGINE_LEAK_LIKELIHOOD", "0.05"))
+ENGINE_BAND_VERY_LIKELY = float(os.getenv("ENGINE_BAND_VERY_LIKELY", "0.80"))
+ENGINE_BAND_LIKELY = float(os.getenv("ENGINE_BAND_LIKELY", "0.50"))
+ENGINE_BAND_POSSIBLE = float(os.getenv("ENGINE_BAND_POSSIBLE", "0.20"))
+SCAMSHIELD_PLAUSIBLE_THRESHOLD = float(os.getenv("SCAMSHIELD_PLAUSIBLE_THRESHOLD", "0.65"))
+SCAMSHIELD_DOUBTFUL_THRESHOLD = float(os.getenv("SCAMSHIELD_DOUBTFUL_THRESHOLD", "0.35"))
+
+ENGINE_MAX_QUESTIONS = 10          # diagnostic questions
+ENGINE_MAX_CONTEXT_QUESTIONS = 3   # extra follow-ups about when/how often/recent events
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [
@@ -61,19 +107,51 @@ REST_FRAMEWORK = {
     ],
     "DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.IsAuthenticated"],
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
-    "DEFAULT_THROTTLE_CLASSES": ["rest_framework.throttling.AnonRateThrottle"],
-    "DEFAULT_THROTTLE_RATES": {"anon": "60/min"},
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 20,
+    "DEFAULT_THROTTLE_CLASSES": [
+        "rest_framework.throttling.AnonRateThrottle",
+        "rest_framework.throttling.UserRateThrottle",
+        "rest_framework.throttling.ScopedRateThrottle",
+    ],
+    "DEFAULT_THROTTLE_RATES": {
+        "anon": "60/min",
+        "user": "300/min",
+        "diagnosis": "120/min",
+        "free_text": "30/hour",
+        "scam_check": "30/min",
+        "auth": "10/min",
+        "analytics": "60/min",
+    },
+}
+
+CELERY_BEAT_SCHEDULE = {
+    "analytics-nightly-rollup": {
+        "task": "analytics.tasks.rollup_daily_stats",
+        "schedule": crontab(hour=2, minute=15),
+    },
 }
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes = 30),
-    'ACCESS_TOKEN_REFRESH': timedelta(days=7),
-    'AUTH_HEADER_TYPES': ('BEARER',),
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=30),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=7),
+    "ROTATE_REFRESH_TOKENS": True,
+    "BLACKLIST_AFTER_ROTATION": True,
+    "UPDATE_LAST_LOGIN": False,
+    "AUTH_HEADER_TYPES": ("Bearer",),
 }
+
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_REFERRER_POLICY = os.getenv(
+    "SECURE_REFERRER_POLICY", "strict-origin-when-cross-origin")
+ADMIN_URL = os.getenv("ADMIN_URL", "admin/").strip("/") or "admin"
+DATA_UPLOAD_MAX_MEMORY_SIZE = 2_621_440
+FILE_UPLOAD_MAX_MEMORY_SIZE = 2_621_440
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -111,6 +189,7 @@ DATABASES = {
         'USER': os.getenv('DB_USER'),
         'PASSWORD': os.getenv('DB_PASSWORD'),
         'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT', '5432'),
     }
 }
 
@@ -124,6 +203,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': {'min_length': 12},
     },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
@@ -150,13 +230,56 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STORAGES = {
+    "default": {"BACKEND": "django.core.files.storage.FileSystemStorage"},
+    "staticfiles": {
+        # Local development and the Django test client do not run collectstatic.
+        # In production, collectstatic builds the manifest before Gunicorn starts.
+        "BACKEND": "config.storage.ProjectStaticFilesStorage",
+    },
+}
+
+SENTRY_DSN = os.getenv("SENTRY_DSN", "").strip()
+if SENTRY_DSN:
+    import sentry_sdk
+    from sentry_sdk.integrations.django import DjangoIntegration
+
+    sentry_sdk.init(
+        dsn=SENTRY_DSN,
+        environment=os.getenv("SENTRY_ENVIRONMENT", "production"),
+        integrations=[DjangoIntegration()],
+        traces_sample_rate=float(os.getenv("SENTRY_TRACES_SAMPLE_RATE", "0")),
+        send_default_pii=False,
+    )
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {"json": {"()": "config.logging.JsonFormatter"}},
+    "handlers": {"console": {"class": "logging.StreamHandler", "formatter": "json"}},
+    "root": {"handlers": ["console"], "level": os.getenv("LOG_LEVEL", "INFO")},
+}
 
 
 # Email
 # https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration
 
+SPECTACULAR_SETTINGS = {
+    "TITLE": "GaariDoc API",
+    "VERSION": "1.0.0",
+    "ENUM_NAME_OVERRIDES": {
+        "DiagnosisSessionStatusEnum": "diagnosis.models.DIAGNOSIS_SESSION_STATUS_CHOICES",
+        "KnowledgeContentStatusEnum": "knowledge.models.Status.choices",
+        "ContentReviewDecisionEnum": "knowledge.models.CONTENT_REVIEW_DECISION_CHOICES",
+        "ContentRevisionStatusEnum": "knowledge.models.CONTENT_REVISION_STATUS_CHOICES",
+        "ReviewStatusEnum": "reviews.models.REVIEW_STATUS_CHOICES",
+    },
+}
+
 MAILERS = {
     'default': {
-        'BACKEND': 'django.core.mail.backends.console.EmailBackend',
+        'BACKEND': ('django.core.mail.backends.smtp.EmailBackend' if not DEBUG
+                    else 'django.core.mail.backends.console.EmailBackend'),
     },
 }
